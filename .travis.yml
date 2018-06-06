@@ -34,6 +34,8 @@ branches:
   only:
   - master
   - /^greenkeeper/.*$/
+  - feature/ghdeploy
+  - 10.0.0
 
 cache:
   directories:

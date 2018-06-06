@@ -44,7 +44,6 @@ LATEST_DIR_NAME="latest"
 #TRAVIS_NODE_VERSION="8"
 #TRAVIS_COMMIT=${COMMIT_HASH}
 #TRAVIS_REPO_SLUG="NationalBankBelgium/stark" # yes we're always on the correct repo
-#TRAVIS_BRANCH=${SOURCE_BRANCH} # yes we're always on the correct branch
 #ENFORCE_SHOWCASE_VERSION_CHECK=false # allows not have consistency between tag version and showcase version
 #encrypted_e546efaa49e5_iv="foo" # variable needed for the decryption of the SSH private key
 #encrypted_e546efaa49e5_key="bar" # variable needed for the decryption of the SSH private key
@@ -135,6 +134,10 @@ travisFoldStart "docs publication checks" "no-xtrace"
 if [[ ${TRAVIS:-} ]]; then
   logInfo "Publishing docs to GH pages";
   logInfo "============================================="
+  logInfo ${TRAVIS_REPO_SLUG}
+  logInfo ${EXPECTED_REPO_SLUG}
+  logInfo "----- source branch ${SOURCE_BRANCH}"
+  logInfo "----- travis branch ${TRAVIS_BRANCH}"
   
   # Don't even try if not running against the official repo
   # We don't want docs publish to run outside of our own little world
@@ -165,11 +168,6 @@ if [[ ${TRAVIS:-} ]]; then
     exit 0;
   fi
   
-  if [[ ${TRAVIS_BRANCH} != ${SOURCE_BRANCH} ]]; then
-    logInfo "Not publishing because this build's branch does not match the expected source branch" 1
-    exit 0; 
-  fi 
-  
   if [[ ${TRAVIS_EVENT_TYPE} == "cron" ]]; then
     logInfo "Not publishing because this is a build triggered for a nightly build" 1
     exit 0;
@@ -185,14 +183,14 @@ if [[ ${TRAVIS:-} ]]; then
   # Those keys are needed to decrypt the ${SSH_KEY_ENCRYPTED} file, which contains the SSH private key
   # that we'll use to push to GitHub pages!
   logInfo "Verifying that the necessary decryption keys are available"
-  if [[ -z ${encrypted_e546efaa49e5_iv+x} ]]; then
-    encrypted_e546efaa49e5_iv=""
+  if [[ -z ${encrypted_e7800d7abd26_iv+x} ]]; then
+    encrypted_e7800d7abd26_iv=""
   fi
-  if [[ -z ${encrypted_e546efaa49e5_key+x} ]]; then
-    encrypted_e546efaa49e5_key=""
+  if [[ -z ${encrypted_e7800d7abd26_key+x} ]]; then
+    encrypted_e7800d7abd26_key=""
   fi
   
-  if [[ ${encrypted_e546efaa49e5_iv} == "" ]]; then
+  if [[ ${encrypted_e7800d7abd26_iv} == "" ]]; then
     logInfo "Not publishing because the SSH key decryption IV is not available as environment variable" 1
     exit 0;
   else
@@ -200,7 +198,7 @@ if [[ ${TRAVIS:-} ]]; then
     ENCRYPTED_IV=${encrypted_e7800d7abd26_iv}
   fi
   
-  if [[ ${encrypted_e546efaa49e5_key} == "" ]]; then
+  if [[ ${encrypted_e7800d7abd26_key} == "" ]]; then
     logInfo "Not publishing because the SSH key decryption key is not available as environment variable" 1
     exit 0;
   else
