@@ -13,16 +13,16 @@ VERBOSE=false
 TRACE=false
 DRY_RUN=false
 ENFORCE_SHOWCASE_VERSION_CHECK=true
-SOURCE_BRANCH="master"
+SOURCE_BRANCH="feature/ghdeploy"
 TARGET_BRANCH="gh-pages"
 COMMIT_HASH=`git rev-parse --verify HEAD`
 
-TARGET_REPO="git@github.com:NationalBankBelgium/stark.git"
-EXPECTED_REPO_SLUG="NationalBankBelgium/stark"
+TARGET_REPO="git@github.com:christophercr/stark.git"
+EXPECTED_REPO_SLUG="christophercr/stark"
 EXPECTED_NODE_VERSION="8"
 
 COMMIT_AUTHOR_USERNAME="TravisCI"
-COMMIT_AUTHOR_EMAIL="seb@dsebastien.net"
+COMMIT_AUTHOR_EMAIL="christophercr@gmail.com"
 
 SSH_KEY_ENCRYPTED="stark-ssh.enc"
 SSH_KEY_CLEARTEXT_FILE="stark-ssh"
@@ -197,7 +197,7 @@ if [[ ${TRAVIS:-} ]]; then
     exit 0;
   else
     logTrace "SSH key decryption IV is available" 2
-    ENCRYPTED_IV=${encrypted_e546efaa49e5_iv}
+    ENCRYPTED_IV=${encrypted_e7800d7abd26_iv}
   fi
   
   if [[ ${encrypted_e546efaa49e5_key} == "" ]]; then
@@ -205,7 +205,7 @@ if [[ ${TRAVIS:-} ]]; then
     exit 0;
   else
     logTrace "SSH key decryption key is available" 2
-    ENCRYPTED_KEY=${encrypted_e546efaa49e5_key}
+    ENCRYPTED_KEY=${encrypted_e7800d7abd26_key}
   fi
   
   # If any of the previous commands in the `script` section of .travis.yaml failed, then abort.
