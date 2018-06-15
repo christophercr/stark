@@ -13,7 +13,6 @@ VERBOSE=false
 TRACE=false
 DRY_RUN=false
 ENFORCE_SHOWCASE_VERSION_CHECK=true
-SOURCE_BRANCH="feature/ghdeploy"
 TARGET_BRANCH="gh-pages"
 COMMIT_HASH=`git rev-parse --verify HEAD`
 
@@ -134,10 +133,6 @@ travisFoldStart "docs publication checks" "no-xtrace"
 if [[ ${TRAVIS:-} ]]; then
   logInfo "Publishing docs to GH pages";
   logInfo "============================================="
-  logInfo ${TRAVIS_REPO_SLUG}
-  logInfo ${EXPECTED_REPO_SLUG}
-  logInfo "----- source branch ${SOURCE_BRANCH}"
-  logInfo "----- travis branch ${TRAVIS_BRANCH}"
   
   # Don't even try if not running against the official repo
   # We don't want docs publish to run outside of our own little world
@@ -183,27 +178,27 @@ if [[ ${TRAVIS:-} ]]; then
   # Those keys are needed to decrypt the ${SSH_KEY_ENCRYPTED} file, which contains the SSH private key
   # that we'll use to push to GitHub pages!
   logInfo "Verifying that the necessary decryption keys are available"
-  if [[ -z ${encrypted_e7800d7abd26_iv+x} ]]; then
-    encrypted_e7800d7abd26_iv=""
+  if [[ -z ${encrypted_4290e9054abd_iv+x} ]]; then
+    encrypted_4290e9054abd_iv=""
   fi
-  if [[ -z ${encrypted_e7800d7abd26_key+x} ]]; then
-    encrypted_e7800d7abd26_key=""
+  if [[ -z ${encrypted_4290e9054abd_key+x} ]]; then
+    encrypted_4290e9054abd_key=""
   fi
   
-  if [[ ${encrypted_e7800d7abd26_iv} == "" ]]; then
+  if [[ ${encrypted_4290e9054abd_iv} == "" ]]; then
     logInfo "Not publishing because the SSH key decryption IV is not available as environment variable" 1
     exit 0;
   else
     logTrace "SSH key decryption IV is available" 2
-    ENCRYPTED_IV=${encrypted_e7800d7abd26_iv}
+    ENCRYPTED_IV=${encrypted_4290e9054abd_iv}
   fi
   
-  if [[ ${encrypted_e7800d7abd26_key} == "" ]]; then
+  if [[ ${encrypted_4290e9054abd_key} == "" ]]; then
     logInfo "Not publishing because the SSH key decryption key is not available as environment variable" 1
     exit 0;
   else
     logTrace "SSH key decryption key is available" 2
-    ENCRYPTED_KEY=${encrypted_e7800d7abd26_key}
+    ENCRYPTED_KEY=${encrypted_4290e9054abd_key}
   fi
   
   # If any of the previous commands in the `script` section of .travis.yaml failed, then abort.
@@ -266,8 +261,15 @@ if [[ ${DRY_RUN} == false ]]; then
     logTrace "Decrypted the SSH private key"
     
     # we use our decrypted private SSH key
-    alias git="GIT_SSH_COMMAND='ssh -i ./${SSH_KEY_CLEARTEXT_FILE}' git"
-    
+    # logTrace "Hi github.com!"
+    # ssh -T git@github.com -i ./${SSH_KEY_CLEARTEXT_FILE}
+    # alias git="GIT_SSH_COMMAND='ssh -i ./${SSH_KEY_CLEARTEXT_FILE}' git"
+    # git config core.sshCommand "ssh -i ./${SSH_KEY_CLEARTEXT_FILE}"
+
+    logTrace "Setting SSH config"
+    mv -f ./${SSH_KEY_CLEARTEXT_FILE} ~/.ssh
+    mv -f ./ssh-config ~/.ssh/config
+
     # alternative:
     #eval `ssh-agent -s`
     #ssh-add ./${SSH_KEY_CLEARTEXT_FILE}

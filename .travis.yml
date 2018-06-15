@@ -34,8 +34,7 @@ branches:
   only:
   - master
   - /^greenkeeper/.*$/
-  - feature/ghdeploy
-  - 10.0.0
+  - /^\d+\.\d+\.\d(-alpha\.\d+|-beta\.\d+)?$/
 
 cache:
   directories:
