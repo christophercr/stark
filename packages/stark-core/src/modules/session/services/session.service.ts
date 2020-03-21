@@ -212,6 +212,9 @@ export class StarkSessionServiceImpl implements StarkSessionService {
 	public logout(): void {
 		// dispatch action so an effect can run any logic if needed
 		this.store.dispatch(new StarkSessionLogout());
+		// stop the idle watching mechanism immediately otherwise if the "logout" Http request takes some to respond and
+		// the "idle.onTimeoutWarning" fires in the meantime, the timeout warning dialog (if enabled) would still be shown :s
+		this.stopIdleService();
 		// the session will always be destroyed right after the response of the logout HTTP call (regardless of its result)
 		this.sendLogoutRequest(this.appConfig.logoutUrl, "", true).subscribe(
 			() => this.destroySession(),
@@ -365,8 +368,10 @@ export class StarkSessionServiceImpl implements StarkSessionService {
 	}
 
 	protected stopIdleService(): void {
-		this.idle.stop();
-		this.idle.clearInterrupts();
+		if (this.idle.isRunning()) {
+			this.idle.stop();
+			this.idle.clearInterrupts();
+		}
 	}
 
 	protected startKeepaliveService(): void {
