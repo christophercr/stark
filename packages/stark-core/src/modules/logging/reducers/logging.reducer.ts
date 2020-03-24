@@ -18,8 +18,8 @@ const INITIAL_STATE: Readonly<StarkLogging> = {
 
 /**
  * Definition of the logging reducer.
- * @param state - the state of the reducer
- * @param action - the action to perform
+ * @param state - The state of the reducer
+ * @param action - The action to perform
  */
 export function loggingReducer(
 	state: Readonly<StarkLogging> = INITIAL_STATE,

@@ -11,13 +11,13 @@ import reduce from "lodash-es/reduce";
 export const STARK_HTTP_PARAM_ENCODER: HttpParameterCodec = new StarkHttpParameterCodec();
 
 /**
- * Util class used for the HTTP module
- * @dynamic See: https://angular.io/guide/aot-compiler#strictmetadataemit
+ * Util class used for the {@link StarkHttpModule}
+ * @dynamic See: https://v7.angular.io/guide/aot-compiler#strictmetadataemit
  */
 export class StarkHttpUtil {
 	/**
 	 * Converts the Map<string, StarkQueryParam> required by the service into a HttpParams object required by Angular
-	 * @param starkQueryParam - params to convert
+	 * @param starkQueryParam - Params to convert
 	 */
 	public static convertStarkQueryParamsIntoHttpParams(starkQueryParam: Map<string, StarkQueryParam>): HttpParams {
 		return reduce(

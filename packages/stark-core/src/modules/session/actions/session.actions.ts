@@ -26,7 +26,6 @@ export enum StarkSessionActionTypes {
 export class StarkChangeLanguage implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.CHANGE_LANGUAGE = StarkSessionActionTypes.CHANGE_LANGUAGE;
 
@@ -43,7 +42,6 @@ export class StarkChangeLanguage implements Action {
 export class StarkChangeLanguageSuccess implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.CHANGE_LANGUAGE_SUCCESS = StarkSessionActionTypes.CHANGE_LANGUAGE_SUCCESS;
 
@@ -60,7 +58,6 @@ export class StarkChangeLanguageSuccess implements Action {
 export class StarkChangeLanguageFailure implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.CHANGE_LANGUAGE_FAILURE = StarkSessionActionTypes.CHANGE_LANGUAGE_FAILURE;
 
@@ -77,7 +74,6 @@ export class StarkChangeLanguageFailure implements Action {
 export class StarkInitializeSession implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.INITIALIZE_SESSION = StarkSessionActionTypes.INITIALIZE_SESSION;
 
@@ -94,7 +90,6 @@ export class StarkInitializeSession implements Action {
 export class StarkInitializeSessionSuccess implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.INITIALIZE_SESSION_SUCCESS = StarkSessionActionTypes.INITIALIZE_SESSION_SUCCESS;
 }
@@ -110,7 +105,6 @@ export class StarkInitializeSessionSuccess implements Action {
 export class StarkDestroySession implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.DESTROY_SESSION = StarkSessionActionTypes.DESTROY_SESSION;
 }
@@ -122,7 +116,6 @@ export class StarkDestroySession implements Action {
 export class StarkDestroySessionSuccess implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.DESTROY_SESSION_SUCCESS = StarkSessionActionTypes.DESTROY_SESSION_SUCCESS;
 }
@@ -134,7 +127,6 @@ export class StarkDestroySessionSuccess implements Action {
 export class StarkSessionTimeoutCountdownStart implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.SESSION_TIMEOUT_COUNTDOWN_START = StarkSessionActionTypes.SESSION_TIMEOUT_COUNTDOWN_START;
 
@@ -152,7 +144,6 @@ export class StarkSessionTimeoutCountdownStart implements Action {
 export class StarkSessionTimeoutCountdownStop implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.SESSION_TIMEOUT_COUNTDOWN_STOP = StarkSessionActionTypes.SESSION_TIMEOUT_COUNTDOWN_STOP;
 }
@@ -163,7 +154,6 @@ export class StarkSessionTimeoutCountdownStop implements Action {
 export class StarkSessionTimeoutCountdownFinish implements Action {
 	/**
 	 * Defines the type of NGRX action to perform.
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.SESSION_TIMEOUT_COUNTDOWN_FINISH =
 		StarkSessionActionTypes.SESSION_TIMEOUT_COUNTDOWN_FINISH;
@@ -177,7 +167,6 @@ export class StarkSessionTimeoutCountdownFinish implements Action {
 export class StarkSessionLogout implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.SESSION_LOGOUT = StarkSessionActionTypes.SESSION_LOGOUT;
 }
@@ -188,7 +177,6 @@ export class StarkSessionLogout implements Action {
 export class StarkUserActivityTrackingPause implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.USER_ACTIVITY_TRACKING_PAUSE = StarkSessionActionTypes.USER_ACTIVITY_TRACKING_PAUSE;
 }
@@ -199,7 +187,6 @@ export class StarkUserActivityTrackingPause implements Action {
 export class StarkUserActivityTrackingResume implements Action {
 	/**
 	 * The type of action
-	 * @link StarkSessionActionTypes
 	 */
 	public readonly type: StarkSessionActionTypes.USER_ACTIVITY_TRACKING_RESUME = StarkSessionActionTypes.USER_ACTIVITY_TRACKING_RESUME;
 }

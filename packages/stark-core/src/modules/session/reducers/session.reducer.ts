@@ -15,7 +15,7 @@ const INITIAL_STATE: StarkSession = new StarkSessionImpl();
  * Definition of the session reducer
  * @param state: the state of the reducer
  * @param action: the action to apply to the reducer
- * @returns a starkSession instance
+ * @returns The new `StarkSession` state
  */
 export function sessionReducer(
 	state: Readonly<StarkSession> = INITIAL_STATE,

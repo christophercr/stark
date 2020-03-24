@@ -21,15 +21,14 @@ export enum StarkRoutingActionTypes {
 export class StarkNavigate implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.NAVIGATE = StarkRoutingActionTypes.NAVIGATE;
 
 	/**
 	 * Class constructor
-	 * @param currentState - name of the current state before the navigation starts.
-	 * @param newState - name of the state to be navigated to.
-	 * @param params - state params object to be passed to the navigated state.
+	 * @param currentState - Name of the current state before the navigation starts.
+	 * @param newState - Name of the state to be navigated to.
+	 * @param params - State params object to be passed to the navigated state.
 	 * @param options - Transition options object to change the behavior of the transition.
 	 */
 	public constructor(
@@ -48,15 +47,14 @@ export class StarkNavigate implements Action {
 export class StarkNavigateSuccess implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.NAVIGATE_SUCCESS = StarkRoutingActionTypes.NAVIGATE_SUCCESS;
 
 	/**
 	 * Class constructor
-	 * @param previousState - name of the initial state where the navigation was started.
-	 * @param currentState - name of the state that was navigated to.
-	 * @param params - state params object that was passed to the navigated state.
+	 * @param previousState - Name of the initial state where the navigation was started.
+	 * @param currentState - Name of the state that was navigated to.
+	 * @param params - State params object that was passed to the navigated state.
 	 */
 	public constructor(public previousState: string, public currentState: string, public params?: RawParams) {}
 }
@@ -69,16 +67,15 @@ export class StarkNavigateSuccess implements Action {
 export class StarkNavigateFailure implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.NAVIGATE_FAILURE = StarkRoutingActionTypes.NAVIGATE_FAILURE;
 
 	/**
 	 * Class constructor
-	 * @param currentState - name of the current state before the navigation started.
-	 * @param newState - name of the state tried to be navigated to.
-	 * @param params - state params object passed to the navigated state.
-	 * @param error - the error describing the reason of the navigation failure.
+	 * @param currentState - Name of the current state before the navigation started.
+	 * @param newState - Name of the state tried to be navigated to.
+	 * @param params - State params object passed to the navigated state.
+	 * @param error - The error describing the reason of the navigation failure.
 	 */
 	public constructor(public currentState: string, public newState: string, public params: RawParams, public error: string) {}
 }
@@ -90,16 +87,15 @@ export class StarkNavigateFailure implements Action {
 export class StarkNavigateRejection implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.NAVIGATE_REJECTION = StarkRoutingActionTypes.NAVIGATE_REJECTION;
 
 	/**
 	 * Class constructor
-	 * @param currentState - name of the current state before the navigation started.
-	 * @param newState - name of the state tried to be navigated to.
-	 * @param params - state params object passed to the navigated state.
-	 * @param reason - the reason describing why the navigation was rejected. This is normally a reason already known by the developer.
+	 * @param currentState - Name of the current state before the navigation started.
+	 * @param newState - Name of the state tried to be navigated to.
+	 * @param params - State params object passed to the navigated state.
+	 * @param reason - The reason describing why the navigation was rejected. This is normally a reason already known by the developer.
 	 */
 	public constructor(public currentState: string, public newState: string, public params: RawParams, public reason: string) {}
 }
@@ -110,8 +106,7 @@ export class StarkNavigateRejection implements Action {
  */
 export class StarkNavigationHistoryLimitReached implements Action {
 	/**
-	 * Defines the type of NGRX action to perform.
-	 * @link StarkRoutingActionTypes
+	 * The action type
 	 */
 	public readonly type: StarkRoutingActionTypes.NAVIGATION_HISTORY_LIMIT_REACHED =
 		StarkRoutingActionTypes.NAVIGATION_HISTORY_LIMIT_REACHED;
@@ -123,13 +118,12 @@ export class StarkNavigationHistoryLimitReached implements Action {
 export class StarkReload implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.RELOAD = StarkRoutingActionTypes.RELOAD;
 
 	/**
 	 * Class constructor
-	 * @param state - name of the state to be reloaded.
+	 * @param state - Name of the state to be reloaded.
 	 */
 	public constructor(public state: string) {}
 }
@@ -142,14 +136,13 @@ export class StarkReload implements Action {
 export class StarkReloadSuccess implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.RELOAD_SUCCESS = StarkRoutingActionTypes.RELOAD_SUCCESS;
 
 	/**
 	 * Class constructor
 	 * @param state -  name of the state that was reloaded.
-	 * @param params - state params object passed to the reloaded state.
+	 * @param params - State params object passed to the reloaded state.
 	 */
 	public constructor(public state: string, public params: RawParams) {}
 }
@@ -161,14 +154,13 @@ export class StarkReloadSuccess implements Action {
 export class StarkReloadFailure implements Action {
 	/**
 	 * The action type
-	 * @link StarkRoutingActionTypes
 	 */
 	public readonly type: StarkRoutingActionTypes.RELOAD_FAILURE = StarkRoutingActionTypes.RELOAD_FAILURE;
 
 	/**
 	 * Class constructor
-	 * @param state - name of the state tried to be reloaded.
-	 * @param params - state params object passed to the reloaded state.
+	 * @param state - Name of the state tried to be reloaded.
+	 * @param params - State params object passed to the reloaded state.
 	 */
 	public constructor(public state: string, public params: RawParams) {}
 }

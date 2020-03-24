@@ -5,14 +5,14 @@ import { NgModuleRef } from "@angular/core";
  */
 export interface StarkEnvironment {
 	/**
-	 * Whether the current environment is production (as described in Angular CLI Wiki)
-	 * @link https://github.com/angular/angular-cli/wiki/stories-application-environments
+	 * Whether the current environment is production, as described
+	 * in {@link https://v7.angular.io/guide/build#configuring-application-environments|Angular docs: Configuring application environments}
 	 */
 	production: boolean;
 
 	/**
-	 * Whether the current environment has Hot Module Replacement enabled (as described in Angular CLI Wiki)
-	 * @link https://github.com/angular/angular-cli/wiki/stories-configure-hmr
+	 * Whether the current environment has Hot Module Replacement enabled, as described
+	 * in {@link https://github.com/angular/angular-cli/wiki/stories-configure-hmr|Angular CLI Wiki: Configure Hot Module Replacement}
 	 */
 	hmr: boolean;
 

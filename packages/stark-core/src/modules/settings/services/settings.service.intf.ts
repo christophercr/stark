@@ -5,15 +5,13 @@ import { InjectionToken } from "@angular/core";
  */
 export const starkSettingsServiceName = "StarkSettingsService";
 /**
- * Injection Token version of the service name
- * @link InjectionToken
+ * {@link https://v7.angular.io/api/core/InjectionToken|InjectionToken} used to provide the {@link StarkSettingsService}
  */
 export const STARK_SETTINGS_SERVICE: InjectionToken<StarkSettingsService> = new InjectionToken<StarkSettingsService>(
 	starkSettingsServiceName
 );
 
 /**
- * Stark Settings Service.
  * Service that allows the manipulation of application settings, some of which can be persisted.
  */
 export interface StarkSettingsService {
@@ -34,7 +32,7 @@ export interface StarkSettingsService {
 	/**
 	 * Gets the preferredLanguage setting
 	 *
-	 * @returns Id of the preferred language
+	 * @returns The id of the preferred language
 	 */
 	getPreferredLanguage(): string;
 

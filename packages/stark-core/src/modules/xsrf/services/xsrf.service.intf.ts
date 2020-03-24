@@ -6,13 +6,14 @@ import { HttpRequest } from "@angular/common/http";
  */
 export const starkXSRFServiceName = "StarkXSRFService";
 /**
- * The InjectionToken version of the service name
+ * {@link https://v7.angular.io/api/core/InjectionToken|InjectionToken} used to provide the {@link StarkXSRFService}
  */
 export const STARK_XSRF_SERVICE: InjectionToken<StarkXSRFService> = new InjectionToken<StarkXSRFService>(starkXSRFServiceName);
 
 /**
  * Stark XSRF Service.
  * Service to get/store the XSRF token to be used with the different backends.
+ * It also adds the XSRF configuration to XHR objects for those HTTP requests not performed using StarkHttpService or Angular's HttpClient.
  */
 export interface StarkXSRFService {
 	/**
@@ -26,7 +27,7 @@ export interface StarkXSRFService {
 	configureXHR(xhr: XMLHttpRequest): void;
 
 	/**
-	 * Return a new `HttpRequest` including the necessary options for state-changing requests (POST, PUT, PATCH or DELETE)
+	 * Return a new {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequest} including the necessary options for state-changing requests (POST, PUT, PATCH or DELETE)
 	 * in order to enable XSRF protection.
 	 * Logs a warning whenever there is no XSRF token to be sent in such requests
 	 * @param request - The Angular `HttpRequest` to be modified

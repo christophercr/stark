@@ -18,7 +18,7 @@ import { InjectionToken } from "@angular/core";
  */
 export const starkRoutingServiceName = "StarkRoutingService";
 /**
- * The injection Token version of the service name
+ * {@link https://v7.angular.io/api/core/InjectionToken|InjectionToken} used to provide the {@link StarkRoutingService}
  */
 export const STARK_ROUTING_SERVICE: InjectionToken<StarkRoutingService> = new InjectionToken<StarkRoutingService>(starkRoutingServiceName);
 
@@ -85,7 +85,7 @@ export interface StarkRoutingService {
 	/**
 	 * Get the config and the interpolated params of the state matching the given url path.
 	 * @param urlPath - The URL path to use in order to find a matching State configuration
-	 * @returns Object containing the state config and the interpolated params. Returns undefined in case there is no State matching
+	 * @returns Object containing the state config and the interpolated params. Returns `undefined` in case there is no State matching
 	 * the given url path.
 	 */
 	getStateConfigByUrlPath(urlPath: string): StarkStateConfigWithParams | undefined;
@@ -101,7 +101,7 @@ export interface StarkRoutingService {
 	/**
 	 * Get the params object passed at runtime to the current state (not the params object defined in the $stateProvider declaration)
 	 *
-	 * @param includeInherited - (Optional) Whether to return also parent states' inherited params. Default: false
+	 * @param includeInherited - (Optional) Whether to return also parent states' inherited params. Default: `false`
 	 * @returns Params object (at runtime) of the current state
 	 */
 	getCurrentStateParams(includeInherited?: boolean): RawParams;
@@ -151,15 +151,14 @@ export interface StarkRoutingService {
 	addKnownNavigationRejectionCause(rejectionCause: string): void;
 
 	/**
-	 * Register a transition lifecycle hook that will be called by the router implementation.
-	 * @param lifecycleHook - Type of lifecycle hook to be registered (an StarkRoutingTransitionHook value).
-	 * @param matchCriteria - To determine which transitions the hook should be invoked for.
-	 * @link https://ui-router.github.io/ng1/docs/latest/interfaces/transition.hookmatchcriteria.html
-	 * @param callback - Hook callback function.
-	 * @link https://ui-router.github.io/ng1/docs/latest/interfaces/transition.transitionstatehookfn.html
-	 * @link https://ui-router.github.io/ng1/docs/latest/interfaces/transition.transitionhookfn.html
-	 * @param options - Additional options when registering the transition hook.
-	 * @link https://ui-router.github.io/ng1/docs/latest/interfaces/transition.hookregoptions.html
+	 * Register a transition lifecycle {@link StarkRoutingTransitionHook|hook} that will be called by the router implementation.
+	 * @param lifecycleHook - Type of lifecycle hook to be registered.
+	 * @param matchCriteria - The [HookMatchCriteria](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.hookmatchcriteria.html) to determine
+	 * which transitions the hook should be invoked for.
+	 * @param callback - A [Transition State Hook callback function](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.transitionstatehookfn.html) or
+	 * [Transition Hook callback function](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.transitionhookfn.html)
+	 * @param options - Additional [options](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.hookregoptions.html) when
+	 * registering the transition hook.
 	 * @returns A function which deregisters the transition hook
 	 */
 	addTransitionHook(
@@ -170,10 +169,11 @@ export interface StarkRoutingService {
 	): () => void;
 
 	/**
-	 * Get the "translationKey" token from the state in this order:
-	 * 1.- From the state's resolves if defined
-	 * 2.- From the state's data if defined
-	 * 3.- Otherwise, the state name is used
+	 * Get the `translationKey` token from the state in this order:
+	 *
+	 * 1. From the state's resolves if defined
+	 * 2. From the state's data if defined
+	 * 3. Otherwise, the state name is used
 	 * @param stateName - Name of the state to get the translation key from
 	 */
 	getTranslationKeyFromState(stateName: string): string;

@@ -1,8 +1,8 @@
 import { StarkHttpRequest, StarkQueryParam, StarkResource } from "../entities";
 
 /**
- * The StarkHttpBaseRequestBuilder interface is used to build a HTTP request.
- * Thanks to this class, headers, query parameters, ...  can be added to the request.
+ * The `StarkHttpBaseRequestBuilder` interface is used to build a {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequest}.
+ * Thanks to this class, headers, query parameters, etc. can be added to the request.
  */
 export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	/**
@@ -19,8 +19,8 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	 * @link StarkQueryParam
 	 * @param name - Query parameter name
 	 * @param value - Query parameter value
-	 * @param allowUndefined - (Optional) Whether to include the query parameter even if it has an undefined value. Default: false.
-	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: false.
+	 * @param allowUndefined - (Optional) Whether to include the query parameter even if it has an `undefined` value. Default: `false`.
+	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: `false`.
 	 * @returns The current builder
 	 */
 	addQueryParameter(name: string, value: StarkQueryParam, allowUndefined?: boolean, allowEmpty?: boolean): this;
@@ -30,8 +30,8 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	 *
 	 * @link StarkQueryParam
 	 * @param params - Object with the query parameters to be added to the request
-	 * @param allowUndefined - (Optional) Whether to include the query parameters even if they have undefined values. Default: false.
-	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: false.
+	 * @param allowUndefined - (Optional) Whether to include the query parameters even if they have `undefined` values. Default: `false`.
+	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: `false`.
 	 * @returns The current builder
 	 */
 	addQueryParameters(params: { [param: string]: StarkQueryParam }, allowUndefined?: boolean, allowEmpty?: boolean): this;
@@ -41,8 +41,8 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	 *
 	 * @link StarkQueryParam
 	 * @param params - Object with the query parameters to be added to the request
-	 * @param allowUndefined - (Optional) Whether to include the query parameters even if they have undefined values. Default: false.
-	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: false.
+	 * @param allowUndefined - (Optional) Whether to include the query parameters even if they have `undefined` values. Default: `false`.
+	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: `false`.
 	 * @returns The current builder
 	 */
 	setQueryParameters(params: { [param: string]: StarkQueryParam }, allowUndefined?: boolean, allowEmpty?: boolean): this;
@@ -62,7 +62,7 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	retry(retryCount: number): this;
 
 	/**
-	 * Returns an instance of the constructed StarkHttpRequest. It should be always the last method to be called.
+	 * Returns an instance of the constructed {@link StarkHttpRequest}. It should be always the last method to be called.
 	 *
 	 * @link StarkHttpRequest
 	 * @returns The constructed request

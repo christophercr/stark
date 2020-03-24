@@ -13,9 +13,9 @@ const INITIAL_STATE: StarkSettings = new StarkSettings();
 
 /**
  * Definition of the settings reducer
- * @param state - the state of the reducer
- * @param action - the action to apply to the reducer
- * @returns a StarkSettings instance
+ * @param state - The state of the reducer
+ * @param action - The action to apply to the reducer
+ * @returns The new `StarkSettings` state
  */
 export function settingsReducer(
 	state: Readonly<StarkSettings> = INITIAL_STATE,

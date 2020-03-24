@@ -21,7 +21,6 @@ export interface StarkHttpRequest<P extends StarkResource = StarkResource> {
 	resourcePath: string;
 	/**
 	 * The sort criteria that will be sent along with the request as query parameters.
-	 * @link StarkSortItem
 	 */
 	sortItems?: StarkSortItem[];
 	/**
@@ -34,14 +33,13 @@ export interface StarkHttpRequest<P extends StarkResource = StarkResource> {
 	headers: Map<string, string | string[]>;
 	/**
 	 * Map containing the parameters that will be included as query parameters.
-	 * The query parameters might be undefined values in case the allowUndefinedQueryParams option is enabled and passed to the corresponding builder.
+	 * The query parameters might be `undefined` values in case the `allowUndefinedQueryParams` option is enabled and passed to the corresponding builder.
 	 * If an array of strings is defined as value, then the parameter will be added to the URL for every value in the array.
 	 * @link StarkQueryParam
 	 */
 	queryParameters: Map<string, StarkQueryParam>;
 	/**
 	 * The type of request according to the different CRUD operations.
-	 * @link StarkHttpRequestType
 	 */
 	requestType: StarkHttpRequestType;
 	/**
@@ -50,7 +48,6 @@ export interface StarkHttpRequest<P extends StarkResource = StarkResource> {
 	item?: P | { [param: string]: any };
 	/**
 	 * A serializer class that will perform the serialization/deserialization of the items to be sent/received to/from the backend.
-	 * @link StarkHttpSerializer
 	 */
 	serializer: StarkHttpSerializer<P>;
 	/**

@@ -5,7 +5,7 @@ import { StarkIsSupportedLanguage } from "../../../validation/decorators/is-supp
 
 /**
  * @ignore
- * @dynamic See: https://angular.io/guide/aot-compiler#strictmetadataemit
+ * @dynamic See: https://v7.angular.io/guide/aot-compiler#strictmetadataemit
  */
 export class StarkLanguageImpl implements StarkLanguage {
 	@IsNotEmpty({ always: true }) // validation must be performed always, regardless of validation groups used.

@@ -10,10 +10,10 @@ import { StarkXSRFHttpInterceptor } from "./interceptors";
 		HttpClientModule,
 		HttpClientXsrfModule.withOptions({
 			// Name of cookie containing the XSRF token. Default value in Angular is 'XSRF-TOKEN'
-			// https://angular.io/guide/http#security-xsrf-protection
+			// https://v7.angular.io/guide/http#security-xsrf-protection
 			cookieName: "XSRF-TOKEN",
 			// Name of HTTP header to populate with the XSRF token. Default value in Angular is 'X-XSRF-TOKEN'.
-			// https://angular.io/guide/http#security-xsrf-protection
+			// https://v7.angular.io/guide/http#security-xsrf-protection
 			headerName: StarkHttpHeaders.XSRF_TOKEN
 		})
 	]
@@ -22,9 +22,9 @@ export class StarkXSRFModule {
 	/**
 	 * Instantiates the services only once since they should be singletons
 	 * so the forRoot() should be called only by the AppModule
-	 * @link https://angular.io/guide/singleton-services#forroot
-	 * @param xsrfConfig - Object containing the configuration (if any) for the XSRF service
-	 * @returns a module with providers
+	 * @link https://v7.angular.io/guide/singleton-services#the-forroot-pattern
+	 * @param xsrfConfig - Object containing the configuration (if any) for the `StarkXSRFService`
+	 * @returns A module with providers
 	 */
 	public static forRoot(xsrfConfig?: StarkXSRFConfig): ModuleWithProviders {
 		return {
@@ -39,10 +39,10 @@ export class StarkXSRFModule {
 
 	/**
 	 * Prevents this module from being re-imported
-	 * @link https://angular.io/guide/singleton-services#prevent-reimport-of-the-coremodule
-	 * @param parentModule - the parent module
-	 * @param xsrfService - The XSRF service of the application
-	 * @param appInitStatus - A class that reflects the state of running {@link APP_INITIALIZER}s.
+	 * @link https://v7.angular.io/guide/singleton-services#prevent-reimport-of-the-greetingmodule
+	 * @param parentModule - The parent module
+	 * @param xsrfService - The `StarkXSRFService` instance of the application.
+	 * @param appInitStatus - A class that reflects the state of running {@link https://v7.angular.io/api/core/APP_INITIALIZER|APP_INITIALIZER}s.
 	 */
 	public constructor(
 		@Optional()

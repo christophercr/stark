@@ -6,8 +6,8 @@ export class StarkErrorHandlingModule {
 	/**
 	 * Instantiates the services only once since they should be singletons
 	 * so the forRoot() should be called only by the AppModule
-	 * @link https://angular.io/guide/singleton-services#forroot
-	 * @returns a module with providers
+	 * @link https://v7.angular.io/guide/singleton-services#the-forroot-pattern
+	 * @returns A module with providers
 	 */
 	public static forRoot(): ModuleWithProviders {
 		return {
@@ -23,8 +23,8 @@ export class StarkErrorHandlingModule {
 
 	/**
 	 * Prevents this module from being re-imported
-	 * @link https://angular.io/guide/singleton-services#prevent-reimport-of-the-coremodule
-	 * @param parentModule - the parent module
+	 * @link https://v7.angular.io/guide/singleton-services#prevent-reimport-of-the-greetingmodule
+	 * @param parentModule - The parent module
 	 */
 	public constructor(
 		@Optional()

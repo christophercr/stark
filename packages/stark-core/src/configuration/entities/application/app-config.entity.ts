@@ -10,7 +10,7 @@ import { StarkMapIsValid, StarkMapNotEmpty } from "../../../validation/decorator
 /**
  * This class is only for serialization purposes
  * @ignore
- * @dynamic See: https://angular.io/guide/aot-compiler#strictmetadataemit
+ * @dynamic See: https://v7.angular.io/guide/aot-compiler#strictmetadataemit
  */
 export class StarkApplicationConfigImpl implements StarkApplicationConfig {
 	// FIXME: properties of the group "temp" are not used yet. Will they still be used?
@@ -181,20 +181,20 @@ export class StarkApplicationConfigImpl implements StarkApplicationConfig {
 	}
 
 	/**
-	 * Check whether the keepAlive option in the StarkApplicationConfig is disabled
+	 * Check whether the `keepAlive` option in the {@link StarkApplicationConfig} is disabled
 	 *
-	 * @param instance - the instance of the stark application configuration
-	 * @returns boolean - if keepAlive is in use, the value of keepAliveDisabled is set to false
+	 * @param instance - The instance of the stark application configuration
+	 * @returns Whether keepAlive is in use, the value of `keepAliveDisabled` is set to false
 	 */
 	public static validateIfKeepAliveEnabled(instance: StarkApplicationConfig): boolean {
 		return instance.keepAliveDisabled !== true;
 	}
 
 	/**
-	 * Check whether the loggingFlush option in the StarkApplicationConfig is disabled
+	 * Check whether the `loggingFlush` option in the {@link StarkApplicationConfig} is disabled
 	 *
-	 * @param instance - the instance of the stark application configuration
-	 * @returns boolean - if loggingFlush is in use, the value of loggingFlushDisabled is set to false
+	 * @param instance - The instance of the stark application configuration
+	 * @returns Whether loggingFlush is in use, the value of `loggingFlushDisabled` is set to false
 	 */
 	public static validateIfLoggingFlushEnabled(instance: StarkApplicationConfig): boolean {
 		return instance.loggingFlushDisabled !== true;
