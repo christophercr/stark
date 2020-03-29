@@ -3,7 +3,7 @@ import { Observable } from "rxjs";
 import { StarkUser } from "../../user/entities";
 
 /**
- * Name of the Session Service, in case injection is required
+ * The name of the service, in case injection is needed
  */
 export const starkSessionServiceName = "StarkSessionService";
 /**

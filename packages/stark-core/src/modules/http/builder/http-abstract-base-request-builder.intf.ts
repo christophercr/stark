@@ -16,9 +16,8 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	/**
 	 * Adds a query parameter to the request (if the parameter already exists it will be overwritten)
 	 *
-	 * @link StarkQueryParam
 	 * @param name - Query parameter name
-	 * @param value - Query parameter value
+	 * @param value - `StarkQueryParam` object to be used as the query parameter value
 	 * @param allowUndefined - (Optional) Whether to include the query parameter even if it has an `undefined` value. Default: `false`.
 	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: `false`.
 	 * @returns The current builder
@@ -28,8 +27,7 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	/**
 	 * Adds query parameters to the request (adds them to the existing query parameters)
 	 *
-	 * @link StarkQueryParam
-	 * @param params - Object with the query parameters to be added to the request
+	 * @param params - Object containing the `StarkQueryParam` objects to be added to the request
 	 * @param allowUndefined - (Optional) Whether to include the query parameters even if they have `undefined` values. Default: `false`.
 	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: `false`.
 	 * @returns The current builder
@@ -39,8 +37,7 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	/**
 	 * Sets query parameters to the request (all existing query parameters will be lost)
 	 *
-	 * @link StarkQueryParam
-	 * @param params - Object with the query parameters to be added to the request
+	 * @param params - Object containing the `StarkQueryParam` objects to be added to the request
 	 * @param allowUndefined - (Optional) Whether to include the query parameters even if they have `undefined` values. Default: `false`.
 	 * @param allowEmpty - (Optional) Whether to include the query parameter even if it is an empty string. Default: `false`.
 	 * @returns The current builder
@@ -62,9 +59,10 @@ export interface StarkHttpBaseRequestBuilder<T extends StarkResource> {
 	retry(retryCount: number): this;
 
 	/**
-	 * Returns an instance of the constructed {@link StarkHttpRequest}. It should be always the last method to be called.
+	 * Returns an instance of the constructed {@link StarkHttpRequest}.
 	 *
-	 * @link StarkHttpRequest
+	 * **It should be always the last method to be called.**
+	 *
 	 * @returns The constructed request
 	 */
 	build(): StarkHttpRequest<T>;

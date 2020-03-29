@@ -2,7 +2,7 @@ import { Action } from "@ngrx/store";
 import { StarkLogMessage } from "../entities";
 
 /**
- * Actions related to stark logging service
+ * Actions related to {@link StarkLoggingService}
  */
 export enum StarkLoggingActionTypes {
 	SET_LOGGING_APPLICATION_ID = "[StarkLogging] Set Logging Application Id",

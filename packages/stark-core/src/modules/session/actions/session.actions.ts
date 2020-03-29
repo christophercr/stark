@@ -2,7 +2,7 @@ import { Action } from "@ngrx/store";
 import { StarkUser } from "../../user/entities";
 
 /**
- * Actions related to stark session service
+ * Actions related to {@link StarkSessionService}
  */
 export enum StarkSessionActionTypes {
 	CHANGE_LANGUAGE = "[StarkSession] Change Language",
@@ -21,7 +21,8 @@ export enum StarkSessionActionTypes {
 }
 
 /**
- * Triggered when the setCurrentLanguage() method is called, just before changing the current session's language.
+ * Triggered when the [StarkSessionService setCurrentLanguage()]{@link StarkSessionService#setCurrentLanguage} method is called,
+ * just before changing the current session's language.
  */
 export class StarkChangeLanguage implements Action {
 	/**
@@ -37,7 +38,8 @@ export class StarkChangeLanguage implements Action {
 }
 
 /**
- * Triggered when the current session's language has been successfully changed by calling the setCurrentLanguage() method.
+ * Triggered when the current session's language has been successfully changed by calling
+ * the [StarkSessionService setCurrentLanguage()]{@link StarkSessionService#setCurrentLanguage} method.
  */
 export class StarkChangeLanguageSuccess implements Action {
 	/**
@@ -69,7 +71,8 @@ export class StarkChangeLanguageFailure implements Action {
 }
 
 /**
- * Triggered by the login() method before the process to initialize the session for the given user starts.
+ * Triggered by the [StarkSessionService login()]{@link StarkSessionService#login} method before the process to
+ * initialize the session for the given user starts.
  */
 export class StarkInitializeSession implements Action {
 	/**
@@ -96,11 +99,13 @@ export class StarkInitializeSessionSuccess implements Action {
 
 /**
  * Triggered before the process to destroy the user's session starts right after the HTTP logout call has been sent.
+ *
  * This action is dispatched whenever the user is going to be logged out due to:
- * 1) Manually clicking in the App Logout component
- * 2) Calling the logout() method.
- * 3) Closing the browser tab.
- * 4) Being inactive for a certain period of time reaching the idle timeout defined by the application.
+ * 1. Manually clicking in the App Logout component (provided by the `StarkUI` package)
+ * 2. Calling the [StarkSessionService logout()]{@link StarkSessionService#logout} method.
+ * 3. Closing the browser tab.
+ * 4. Being inactive for a certain period of time reaching the idle timeout defined by the
+ * application's [StarkApplicationConfig sessionTimeout]{@link StarkApplicationConfig#sessionTimeout}.
  */
 export class StarkDestroySession implements Action {
 	/**
@@ -122,7 +127,10 @@ export class StarkDestroySessionSuccess implements Action {
 
 /**
  * Triggered when the countdown to automatically destroy the user's session due to inactivity starts.
- * The countdown is defined in the sessionTimeoutWarningPeriod option in the application configuration. By default is set to 15 seconds.
+ *
+ * The countdown is defined in the application's [StarkApplicationConfig sessionTimeoutWarningPeriod]{@link StarkApplicationConfig#sessionTimeoutWarningPeriod}.
+ *
+ * By default is set to 15 seconds.
  */
 export class StarkSessionTimeoutCountdownStart implements Action {
 	/**
@@ -139,6 +147,7 @@ export class StarkSessionTimeoutCountdownStart implements Action {
 
 /**
  * Triggered when the countdown to automatically destroy the user's session due to inactivity stops.
+ * 
  * This countdown stops automatically when the user is active again and no longer idle.
  */
 export class StarkSessionTimeoutCountdownStop implements Action {
@@ -160,9 +169,11 @@ export class StarkSessionTimeoutCountdownFinish implements Action {
 }
 
 /**
- * Triggered when the user is about to be logged out and the HTTP logout call to be sent. This action is called before the process to destroy the user's session starts.
- * This action is dispatched by the logout() method or in case the browser tab was closed.
- * This action is dispatched before the StarkSessionActions.DESTROY_SESSION action.
+ * Triggered when the user is about to be logged out and the HTTP logout call to be sent.
+ * This action is called before the process to destroy the user's session starts.
+ *
+ * This action is dispatched by the [StarkSessionService logout()]{@link StarkSessionService#logout} method or in case the browser tab was closed and is dispatched before
+ * the {@link StarkDestroySession} action.
  */
 export class StarkSessionLogout implements Action {
 	/**
@@ -172,7 +183,8 @@ export class StarkSessionLogout implements Action {
 }
 
 /**
- * Triggered by the pauseUserActivityTracking() method when the user activity tracking (automatically done by the Session service) is paused.
+ * Triggered by the [StarkSessionService pauseUserActivityTracking()]{@link StarkSessionService#pauseUserActivityTracking} method
+ * when the user activity tracking is paused (automatically done by the {@link StarkSessionService}).
  */
 export class StarkUserActivityTrackingPause implements Action {
 	/**
@@ -182,7 +194,8 @@ export class StarkUserActivityTrackingPause implements Action {
 }
 
 /**
- * Triggered by the resumeUserActivityTracking()  method when the user activity tracking (automatically done by the Session service) is resumed.
+ * Triggered by the [StarkSessionService resumeUserActivityTracking()]{@link StarkSessionService#resumeUserActivityTracking}  method
+ * when the user activity tracking is resumed (automatically done by the {@link StarkSessionService}).
  */
 export class StarkUserActivityTrackingResume implements Action {
 	/**

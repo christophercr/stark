@@ -43,7 +43,7 @@ export interface StarkValidator extends Validator {
 	 * <li>3 letters or digits: branch code, optional ('XXX' for primary office)</li>
 	 * </ul>
 	 *
-	 * @link https://en.wikipedia.org/wiki/ISO_9362
+	 * See {@link https://en.wikipedia.org/wiki/ISO_9362}
 	 *
 	 * @param value - The bic to validate
 	 * @returns `true` if the bic is valid

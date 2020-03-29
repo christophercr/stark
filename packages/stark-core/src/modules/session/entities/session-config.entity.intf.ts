@@ -6,11 +6,11 @@ import { InjectionToken } from "@angular/core";
 export const STARK_SESSION_CONFIG: InjectionToken<StarkSessionConfig> = new InjectionToken<StarkSessionConfig>("StarkSessionConfig");
 
 /**
- * Definition of the configuration object for the Stark Session service
+ * Definition of the configuration object for the {@link StarkSessionService}
  */
 export interface StarkSessionConfig {
 	/**
-	 * Router state for the Login page where the user can choose a profile and use it to impersonate himself as someone else.
+	 * Router state for the {@link starkLoginStateName} where the user can choose a profile and use it to impersonate himself as someone else.
 	 * This state is only used in DEVELOPMENT.
 	 */
 	loginStateName?: string;

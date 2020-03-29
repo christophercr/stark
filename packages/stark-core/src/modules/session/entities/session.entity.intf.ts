@@ -1,7 +1,7 @@
 import { StarkUser } from "../../user/entities";
 
 /**
- * The StarkSession interface describes the information that is stored and available during the whole session of a user.
+ * Interface that describes the information that is stored and available during the whole session of a user.
  */
 export interface StarkSession {
 	/**

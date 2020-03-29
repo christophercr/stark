@@ -14,7 +14,7 @@ import { StarkStateConfigWithParams } from "./state-config-with-params.intf";
 import { InjectionToken } from "@angular/core";
 
 /**
- * The name of the Stark Routing Service, in case injection is needed
+ * The name of the service, in case injection is needed
  */
 export const starkRoutingServiceName = "StarkRoutingService";
 /**
@@ -144,7 +144,7 @@ export interface StarkRoutingService {
 	isCurrentUiStateIncludedIn(stateName: string, stateParams?: RawParams): boolean;
 
 	/**
-	 * Adds a navigation rejection cause to the rejections causes known by the routing service. These known rejection causes
+	 * Adds a navigation rejection cause to the rejections causes known by the Routing service. These known rejection causes
 	 * will be treated differently than any other navigation error (a Rejection action will be dispatched instead of a Failure action).
 	 * @param rejectionCause - String that will be compared to the rejection reason provided by the router implementation
 	 */

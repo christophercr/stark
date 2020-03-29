@@ -26,7 +26,7 @@ export const starkIsBICValidatorName = "starkIsBIC";
  * <li>3 letters or digits: branch code, optional ('XXX' for primary office)</li>
  * </ul>
  *
- * @link https://en.wikipedia.org/wiki/ISO_9362
+ * See {@link https://en.wikipedia.org/wiki/ISO_9362}
  */
 export function starkIsBIC(bic: string): boolean {
 	const swiftRegex: RegExp = /^[A-Za-z]{6}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$/;

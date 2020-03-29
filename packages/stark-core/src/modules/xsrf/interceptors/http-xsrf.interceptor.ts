@@ -30,7 +30,7 @@ export class StarkXSRFHttpInterceptor implements HttpInterceptor {
 		return next
 			.handle(xsrfProtectedRequest) // pass request through to the next request handler
 			.pipe(
-				// the Http response is intercepted in order to extract and store the XSRF token via the XSRF service
+				// the Http response is intercepted in order to extract and store the XSRF token via the StarkXSRFService
 				tap((_httpResponse: HttpEvent<any>) => {
 					this.xsrfService.storeXSRFToken();
 				})

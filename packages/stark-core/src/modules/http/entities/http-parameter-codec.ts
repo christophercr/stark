@@ -1,9 +1,15 @@
 import { HttpParameterCodec } from "@angular/common/http";
 
 /**
- * A custom implementation of HttpParameterCodec (used for encoding / decoding HTTP query parameters).
+ *
+ * A custom implementation of Angular {@link https://v7.angular.io/api/common/http/HttpParameterCodec|HttpParameterCodec} to correctly
+ * encode/decode HTTP query parameters via the {@link StarkHttpService}.
+ *
  * Uses the default JavaScript method `encodeURIComponent` and `decodeURIComponent` for encoding and decoding.
- * @link https://github.com/angular/angular/issues/18261#issuecomment-426383787
+ *
+ * See:
+ * - {@link https://github.com/NationalBankBelgium/stark/issues/1130}
+ * - {@link https://github.com/angular/angular/issues/18261#issuecomment-426383787}
  */
 export class StarkHttpParameterCodec implements HttpParameterCodec {
 	/**

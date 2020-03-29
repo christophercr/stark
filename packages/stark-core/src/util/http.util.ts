@@ -5,8 +5,10 @@ import { convertMapIntoObject } from "./util-helpers";
 import reduce from "lodash-es/reduce";
 
 /**
- * A custom implementation of HttpParameterCodec to correctly encode query parameters.
- * @link https://github.com/NationalBankBelgium/stark/issues/1130
+ * An instance of the {@link StarkHttpParameterCodec} which is internally used by
+ * the [StarkHttpUtil convertStarkQueryParamsIntoHttpParams]{@link StarkHttpUtil#convertStarkQueryParamsIntoHttpParams} method.
+ *
+ * See {@link https://github.com/NationalBankBelgium/stark/issues/1130}
  */
 export const STARK_HTTP_PARAM_ENCODER: HttpParameterCodec = new StarkHttpParameterCodec();
 
@@ -16,7 +18,7 @@ export const STARK_HTTP_PARAM_ENCODER: HttpParameterCodec = new StarkHttpParamet
  */
 export class StarkHttpUtil {
 	/**
-	 * Converts the Map<string, StarkQueryParam> required by the service into a HttpParams object required by Angular
+	 * Converts the `Map<string, StarkQueryParam>` required by the {@link StarkHttpService} into a `HttpParams` object required by Angular
 	 * @param starkQueryParam - Params to convert
 	 */
 	public static convertStarkQueryParamsIntoHttpParams(starkQueryParam: Map<string, StarkQueryParam>): HttpParams {

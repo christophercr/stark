@@ -20,15 +20,17 @@ export interface StarkXSRFService {
 	 * Add the necessary options to the XHR config in order to enable XSRF protection.
 	 * Since the service will add the XSRF header to the XHR object, this method must be called after calling the XHR open() method because
 	 * headers cannot be set before open(). See https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
-	 * This method should be used for those HTTP state-changing requests (POST, PUT, PATCH or DELETE) which are not performed
+	 *
+	 * This method should be used for those HTTP "state-changing" requests (POST, PUT, PATCH or DELETE) which are not performed
 	 * using StarkHttpService or Angular raw $http
 	 * @param xhr - The XHR object to be configured
 	 */
 	configureXHR(xhr: XMLHttpRequest): void;
 
 	/**
-	 * Return a new {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequest} including the necessary options for state-changing requests (POST, PUT, PATCH or DELETE)
-	 * in order to enable XSRF protection.
+	 * Return a new {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequest} including the necessary options
+	 * for "state-changing" requests (POST, PUT, PATCH or DELETE) in order to enable XSRF protection.
+	 *
 	 * Logs a warning whenever there is no XSRF token to be sent in such requests
 	 * @param request - The Angular `HttpRequest` to be modified
 	 * @returns The modified Angular `HttpRequest`

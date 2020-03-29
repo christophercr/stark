@@ -16,8 +16,9 @@ export const STARK_LOGGING_SERVICE: InjectionToken<StarkLoggingService> = new In
  */
 export interface StarkLoggingService {
 	/**
-	 * Gets the current correlationId. In fact when the logging service is created, it gets a unique correlation Id.
-	 * This value can be used while displaying a generic error message.
+	 * Gets the current `correlationId`. This value can be used while displaying a generic error message.
+	 * 
+	 * **When the logging service is created, it gets a unique correlation Id.**
 	 */
 	readonly correlationId: string;
 

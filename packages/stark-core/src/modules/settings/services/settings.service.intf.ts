@@ -1,7 +1,7 @@
 import { InjectionToken } from "@angular/core";
 
 /**
- * Name of the Settings service, in case injection is needed
+ * Name of the service, in case injection is needed
  */
 export const starkSettingsServiceName = "StarkSettingsService";
 /**
@@ -18,8 +18,8 @@ export interface StarkSettingsService {
 	/**
 	 * Initialize the settings based on the default settings defined following this order:
 	 *
-	 * 1.- Persisted language settings
-	 * 2.- If no persisted language found, AppConfig settings are taken
+	 * 1. Persisted language settings
+	 * 2. If no persisted language found, AppConfig settings are taken
 	 */
 	initializeSettings(): void;
 
