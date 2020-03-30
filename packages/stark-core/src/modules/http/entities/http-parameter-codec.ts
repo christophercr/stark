@@ -14,7 +14,7 @@ import { HttpParameterCodec } from "@angular/common/http";
 export class StarkHttpParameterCodec implements HttpParameterCodec {
 	/**
 	 * Encodes a key
-	 * @param key - Key to encode
+	 * @param key Key to encode
 	 */
 	public encodeKey(key: string): string {
 		return encodeURIComponent(key);
@@ -22,7 +22,7 @@ export class StarkHttpParameterCodec implements HttpParameterCodec {
 
 	/**
 	 * Encodes a value
-	 * @param value - Value to encode
+	 * @param value Value to encode
 	 */
 	public encodeValue(value: string): string {
 		return encodeURIComponent(value);
@@ -30,7 +30,7 @@ export class StarkHttpParameterCodec implements HttpParameterCodec {
 
 	/**
 	 * Decodes a key
-	 * @param key - Key to decode
+	 * @param key Key to decode
 	 */
 	public decodeKey(key: string): string {
 		return decodeURIComponent(key);
@@ -38,7 +38,7 @@ export class StarkHttpParameterCodec implements HttpParameterCodec {
 
 	/**
 	 * Decodes a value
-	 * @param value - Value to decode
+	 * @param value Value to decode
 	 */
 	public decodeValue(value: string): string {
 		return decodeURIComponent(value);

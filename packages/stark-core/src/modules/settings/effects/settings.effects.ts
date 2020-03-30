@@ -13,8 +13,8 @@ import { STARK_SESSION_SERVICE, StarkSessionService } from "../../session/servic
 export class StarkSettingsEffects {
 	/**
 	 * Class constructor
-	 * @param actions$ - The action to perform
-	 * @param sessionService - The `StarkSessionService` instance of the application
+	 * @param actions$ The action to perform
+	 * @param sessionService The `StarkSessionService` instance of the application
 	 */
 	public constructor(private actions$: Actions, @Inject(STARK_SESSION_SERVICE) public sessionService: StarkSessionService) {}
 

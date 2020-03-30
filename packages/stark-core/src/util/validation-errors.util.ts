@@ -6,8 +6,8 @@ import { ValidationError } from "class-validator";
 export class StarkValidationErrorsUtil {
 	/**
 	 * Throws an error in case there are  validation errors. The error contains the description of the different errors.
-	 * @param validationErrors - Array containing validation results
-	 * @param errorMessagePrefix - (Optional) A prefix to be added to the error message
+	 * @param validationErrors Array containing validation results
+	 * @param errorMessagePrefix (Optional) A prefix to be added to the error message
 	 * @throws Error
 	 */
 	public static throwOnError(validationErrors: ValidationError[], errorMessagePrefix?: string): void {
@@ -21,8 +21,8 @@ export class StarkValidationErrorsUtil {
 
 	/**
 	 * Extracts the description of all the validation errors and generates a single string containing such descriptions
-	 * @param validationErrors - Array containing validation results
-	 * @param errorMessagePrefix - (Optional) A prefix to be added to the generated string
+	 * @param validationErrors Array containing validation results
+	 * @param errorMessagePrefix (Optional) A prefix to be added to the generated string
 	 */
 	// FIXME: re-enable this TSLINT rule and refactor this function to reduce its cognitive complexity
 	// tslint:disable-next-line:cognitive-complexity

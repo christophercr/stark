@@ -14,14 +14,14 @@ import { STARK_XSRF_SERVICE, StarkXSRFService } from "../services/xsrf.service.i
 export class StarkXSRFHttpInterceptor implements HttpInterceptor {
 	/**
 	 * Class constructor
-	 * @param xsrfService - The application's StarkXSRFService instance
+	 * @param xsrfService The application's StarkXSRFService instance
 	 */
 	public constructor(@Inject(STARK_XSRF_SERVICE) public xsrfService: StarkXSRFService) {}
 
 	/**
 	 * Intercepts the outgoing {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequest}
-	 * @param request - The intercepted outgoing `HttpRequest`
-	 * @param next - The next request handler where the `HttpRequest` will be forwarded to
+	 * @param request The intercepted outgoing `HttpRequest`
+	 * @param next The next request handler where the `HttpRequest` will be forwarded to
 	 * @returns The modified `HttpRequest` with the XSRF configuration enabled.
 	 */
 	public intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

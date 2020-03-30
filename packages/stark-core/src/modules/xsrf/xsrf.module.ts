@@ -24,7 +24,7 @@ export class StarkXSRFModule {
 	 * so the `forRoot()` should be called only by the `AppModule`.
 	 *
 	 * See {@link https://v7.angular.io/guide/singleton-services#the-forroot-pattern|Angular docs: The forRoot() pattern}
-	 * @param xsrfConfig - Object containing the configuration (if any) for the `StarkXSRFService`
+	 * @param xsrfConfig Object containing the configuration (if any) for the `StarkXSRFService`
 	 * @returns A module with providers
 	 */
 	public static forRoot(xsrfConfig?: StarkXSRFConfig): ModuleWithProviders {
@@ -41,9 +41,9 @@ export class StarkXSRFModule {
 	/**
 	 * Prevents this module from being re-imported
 	 * See {@link https://v7.angular.io/guide/singleton-services#prevent-reimport-of-the-greetingmodule|Angular docs: Prevent reimport of a root module}
-	 * @param parentModule - The parent module
-	 * @param xsrfService - The `StarkXSRFService` instance of the application.
-	 * @param appInitStatus - A class that reflects the state of running {@link https://v7.angular.io/api/core/APP_INITIALIZER|APP_INITIALIZER}s.
+	 * @param parentModule The parent module
+	 * @param xsrfService The `StarkXSRFService` instance of the application.
+	 * @param appInitStatus A class that reflects the state of running {@link https://v7.angular.io/api/core/APP_INITIALIZER|APP_INITIALIZER}s.
 	 */
 	public constructor(
 		@Optional()

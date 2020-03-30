@@ -552,8 +552,8 @@ export class StarkRoutingServiceImpl implements StarkRoutingService {
 
 	/**
 	 * Check whether the given state is a parent/ancestor of the given currentState
-	 * @param state - The state that will be checked whether is a parent of the currentState
-	 * @param currentState - (Optional) If not provided, it is set to the current router state
+	 * @param state The state that will be checked whether is a parent of the currentState
+	 * @param currentState (Optional) If not provided, it is set to the current router state
 	 */
 	private isParentState(state: StateObject, currentState: StateObject = this.getCurrentState()): boolean {
 		if (currentState.parent) {

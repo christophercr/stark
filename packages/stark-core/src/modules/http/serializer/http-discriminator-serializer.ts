@@ -19,8 +19,8 @@ export class StarkHttpDiscriminatorSerializer<T extends StarkResource> extends S
 
 	/**
 	 * Constructor for StarkHttpDiscriminatorSerializer
-	 * @param discriminatorProperty - The discriminator property
-	 * @param typesMap - Map of types based on the discriminator property value
+	 * @param discriminatorProperty The discriminator property
+	 * @param typesMap Map of types based on the discriminator property value
 	 */
 	public constructor(discriminatorProperty: string, typesMap: Map<any, StarkSerializable>) {
 		super();

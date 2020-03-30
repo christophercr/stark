@@ -12,9 +12,9 @@ export type StarkMetadataValidationGroups = "settings";
 export class StarkConfigurationUtil {
 	/**
 	 * Validates the given AppConfig instance and throws an error in case it is not valid
-	 * @param appConfig - The AppConfig instance to be validated
-	 * @param groups - The groups to be used for validating the config
-	 * @param errorMessagePrefix - The prefix to be added to the error message in case the config is not valid
+	 * @param appConfig The AppConfig instance to be validated
+	 * @param groups The groups to be used for validating the config
+	 * @param errorMessagePrefix The prefix to be added to the error message in case the config is not valid
 	 */
 	public static validateConfig(
 		appConfig: StarkApplicationConfig,
@@ -31,9 +31,9 @@ export class StarkConfigurationUtil {
 
 	/**
 	 * Validates the given AppMetadata instance and throws an error in case it is not valid
-	 * @param appMetadata - The AppMetadata instance to be validated
-	 * @param groups - The groups to be used for validating the config
-	 * @param errorMessagePrefix - The prefix to be added to the error message in case the config is not valid
+	 * @param appMetadata The AppMetadata instance to be validated
+	 * @param groups The groups to be used for validating the config
+	 * @param errorMessagePrefix The prefix to be added to the error message in case the config is not valid
 	 */
 	public static validateMetadata(
 		appMetadata: StarkApplicationMetadata,

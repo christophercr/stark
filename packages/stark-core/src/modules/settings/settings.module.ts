@@ -26,7 +26,7 @@ export class StarkSettingsModule {
 	/**
 	 * Prevents this module from being re-imported
 	 * See {@link https://v7.angular.io/guide/singleton-services#prevent-reimport-of-the-greetingmodule|Angular docs: Prevent reimport of a root module}
-	 * @param parentModule - The parent module
+	 * @param parentModule The parent module
 	 */
 	public constructor(
 		@Optional()

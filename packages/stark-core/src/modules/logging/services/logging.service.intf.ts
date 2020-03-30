@@ -36,27 +36,27 @@ export interface StarkLoggingService {
 	 * Logs debug messages to be used only in development to track issues.
 	 * The debug messages are only logged (and afterwards stored in the Redux store) only when the `debugLoggingEnabled` configuration
 	 * setting from the {@link StarkApplicationConfig} is set to `true`.
-	 * @param args - The arguments to log
+	 * @param args The arguments to log
 	 */
 	debug(...args: any[]): void;
 
 	/**
 	 * Logs information messages. These messages are also stored in the Redux store.
-	 * @param args - The arguments to log
+	 * @param args The arguments to log
 	 */
 	info(...args: any[]): void;
 
 	/**
 	 * Logs warning messages. Warning messages can, for instance, indicate a non blocking problem in the software. These messages are also stored in the Redux store.
-	 * @param args - The arguments to log
+	 * @param args The arguments to log
 	 */
 	warn(...args: any[]): void;
 
 	/**
 	 * Logs error messages. Error messages should be logged when there was an unexpected error while executing the code.
 	 * They are typically logged in the catch method of a try-catch block. These messages are also stored in the Redux store.
-	 * @param message - The message to log
-	 * @param error - The error to log
+	 * @param message The message to log
+	 * @param error The error to log
 	 */
 	error(message: string, error?: StarkError | Error): void;
 }

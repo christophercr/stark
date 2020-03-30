@@ -106,7 +106,7 @@ export class StarkSessionServiceImpl implements StarkSessionService {
 
 	/**
 	 * Validates the StarkSessionConfig provided.
-	 * @param customConfig - Custom configuration object passed via the StarkSessionModule.forRoot() method
+	 * @param customConfig Custom configuration object passed via the StarkSessionModule.forRoot() method
 	 * @throws In case the configuration object passed via the StarkSessionModule.forRoot() method is not valid
 	 */
 	protected validateSessionConfig(customConfig: StarkSessionConfig): void {
@@ -185,7 +185,7 @@ export class StarkSessionServiceImpl implements StarkSessionService {
 	/**
 	 * Performs all the necessary actions to initialize the session.
 	 * It dispatches a INITIALIZE_SESSION action to the NGRX-Store
-	 * @param user - The user used to initialize the session.
+	 * @param user The user used to initialize the session.
 	 */
 	protected initializeSession(user: StarkUser): void {
 		this.store.dispatch(new StarkInitializeSession(user));

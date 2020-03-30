@@ -122,7 +122,7 @@ export class StarkHttpServiceImpl<P extends StarkResource> implements StarkHttpS
 	/**
 	 * remove the etag before executing the request
 	 * We have to remove it otherwise it'll be serialized and cause issues on the back-end
-	 * @param request - The request object to modify
+	 * @param request The request object to modify
 	 * @returns The modified request object
 	 */
 	public removeETagFromRequestItem(request: StarkHttpRequest<P>): StarkHttpRequest<P> {
@@ -140,7 +140,7 @@ export class StarkHttpServiceImpl<P extends StarkResource> implements StarkHttpS
 
 	/**
 	 * add authentication headers necessary for non-production environments
-	 * @param request - The request object to modify
+	 * @param request The request object to modify
 	 * @returns The modified request object
 	 */
 	public addDevAuthenticationHeaders(request: StarkHttpRequest<P>): StarkHttpRequest<P> {
@@ -158,7 +158,7 @@ export class StarkHttpServiceImpl<P extends StarkResource> implements StarkHttpS
 
 	/**
 	 * add header for activity correlation
-	 * @param request - The request object to modify
+	 * @param request The request object to modify
 	 * @returns The modified request object
 	 */
 	public addCorrelationIdentifierHeader(request: StarkHttpRequest<P>): StarkHttpRequest<P> {

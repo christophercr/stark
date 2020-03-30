@@ -10,7 +10,7 @@ export const starkIsKBOValidatorName = "starkIsKBO";
 /**
  * @ignore
  * Validates that the given string is a valid KBO number (Belgium).
- * @param kbo - The kbo to validate
+ * @param kbo The kbo to validate
  * @returns `true` if the kbo is valid
  */
 export function starkIsKBO(kbo: string): boolean {

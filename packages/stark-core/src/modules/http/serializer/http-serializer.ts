@@ -18,7 +18,7 @@ export class StarkHttpSerializerImpl<T extends StarkResource> implements StarkHt
 
 	/**
 	 * Class constructor
-	 * @param type - Default Type Serializable
+	 * @param type Default Type Serializable
 	 */
 	public constructor(type?: StarkSerializable) {
 		this._type = type;
@@ -26,7 +26,7 @@ export class StarkHttpSerializerImpl<T extends StarkResource> implements StarkHt
 
 	/**
 	 * Serialize the given resource entity into an object or a string.
-	 * @param resource - The resource to serialize
+	 * @param resource The resource to serialize
 	 */
 	public serialize(resource: T): string | object {
 		return Serialize(resource, this.getType(resource));
@@ -34,7 +34,7 @@ export class StarkHttpSerializerImpl<T extends StarkResource> implements StarkHt
 
 	/**
 	 * Deserialize provided string or object into the corresponding resource entity.
-	 * @param raw - The raw string or object to deserialize
+	 * @param raw The raw string or object to deserialize
 	 */
 	public deserialize(raw: string | object): T {
 		return Deserialize(raw, this.getType(raw));

@@ -12,8 +12,8 @@ export const starkIsBBANValidatorName = "starkIsBBAN";
  * @ignore
  * Validates that the given string is a valid BBAN account. (Based on the country).
  * This validation requires a special usage because of the country code.
- * @param bban - The bban account number to validate
- * @param countryCode - The country code that will be used to validate the bban number
+ * @param bban The bban account number to validate
+ * @param countryCode The country code that will be used to validate the bban number
  * @returns `true` if the bban number is valid
  */
 export function starkIsBBAN(bban: string, countryCode: string = ""): boolean {
@@ -34,7 +34,7 @@ export function starkIsBBAN(bban: string, countryCode: string = ""): boolean {
 /**
  * @ignore
  * Calculates the check digit, to ensure there is no error with the bban number
- * @param bbanNumber - The bban number to validate
+ * @param bbanNumber The bban number to validate
  * @returns The newly calculated check digits
  */
 function calculateCheckDigit(bbanNumber: string): number {

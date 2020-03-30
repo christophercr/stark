@@ -25,8 +25,8 @@ import cloneDeep from "lodash-es/cloneDeep";
  *   3. The 'module' translations are added in the translateService, replacing any existing translations
  *   4. The 'stored' translations are added in the translateService, replacing any existing translations
  *
- * @param translateService - A reference to the translateService instance
- * @param localesToMerge - A list of StarkLocales that contain the translations for a specific language
+ * @param translateService A reference to the translateService instance
+ * @param localesToMerge A list of StarkLocales that contain the translations for a specific language
  *
  * @example:
  *   mergeTranslations(this.translateService, english, french, dutch);

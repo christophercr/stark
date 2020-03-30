@@ -54,7 +54,7 @@ export class MockStarkSessionService implements SpyObj<StarkSessionService> {
 
 	/**
 	 * Creates a new mock instance.
-	 * @param devAuthenticationHeaders - Development authentication headers to set to this instance
+	 * @param devAuthenticationHeaders Development authentication headers to set to this instance
 	 */
 	public constructor(devAuthenticationHeaders?: Map<string, string | string[]>) {
 		if (!devAuthenticationHeaders) {

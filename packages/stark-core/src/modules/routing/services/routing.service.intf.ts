@@ -30,9 +30,9 @@ export interface StarkRoutingService {
 	/**
 	 * Triggers the navigation to the given state
 	 *
-	 * @param newState - State name to be navigated to
-	 * @param params - (Optional) State params object to be passed to the navigated state
-	 * @param options - (Optional) Transition options object to change the behavior of the transition.
+	 * @param newState State name to be navigated to
+	 * @param params (Optional) State params object to be passed to the navigated state
+	 * @param options (Optional) Transition options object to change the behavior of the transition.
 	 * @returns Observable that will emit on navigation Success/Failure
 	 */
 	navigateTo(newState: string, params?: RawParams, options?: TransitionOptions): Observable<any>;
@@ -40,7 +40,7 @@ export interface StarkRoutingService {
 	/**
 	 * Triggers the navigation to the Home state (defined in appConfig)
 	 *
-	 * @param params - (Optional) State params object to be passed to the navigated state
+	 * @param params (Optional) State params object to be passed to the navigated state
 	 * @returns Observable that will emit on navigation Success/Failure
 	 */
 	navigateToHome(params?: RawParams): Observable<any>;
@@ -84,7 +84,7 @@ export interface StarkRoutingService {
 
 	/**
 	 * Get the config and the interpolated params of the state matching the given url path.
-	 * @param urlPath - The URL path to use in order to find a matching State configuration
+	 * @param urlPath The URL path to use in order to find a matching State configuration
 	 * @returns Object containing the state config and the interpolated params. Returns `undefined` in case there is no State matching
 	 * the given url path.
 	 */
@@ -93,7 +93,7 @@ export interface StarkRoutingService {
 	/**
 	 * Get the config of the state matching the given state name
 	 *
-	 * @param stateName - The state name to use in order to find a matching State configuration
+	 * @param stateName The state name to use in order to find a matching State configuration
 	 * @returns Config object of the state matching the given state name
 	 */
 	getStateDeclarationByStateName(stateName: string): StateDeclaration | undefined;
@@ -101,7 +101,7 @@ export interface StarkRoutingService {
 	/**
 	 * Get the params object passed at runtime to the current state (not the params object defined in the $stateProvider declaration)
 	 *
-	 * @param includeInherited - (Optional) Whether to return also parent states' inherited params. Default: `false`
+	 * @param includeInherited (Optional) Whether to return also parent states' inherited params. Default: `false`
 	 * @returns Params object (at runtime) of the current state
 	 */
 	getCurrentStateParams(includeInherited?: boolean): RawParams;
@@ -130,34 +130,34 @@ export interface StarkRoutingService {
 	/**
 	 * Checks whether the stateName passed as parameter corresponds to the current state.
 	 *
-	 * @param stateName - Name of the state to compare with the current state
-	 * @param stateParams - Optional - If provided, apart from the state name, this state params object
+	 * @param stateName Name of the state to compare with the current state
+	 * @param stateParams - Optional If provided, apart from the state name, this state params object
 	 * will be compared to the current state params in order to determine if it corresponds to the current state
 	 */
 	isCurrentUiState(stateName: string, stateParams?: RawParams): boolean;
 
 	/**
 	 * Check whether the stateName passed as parameter is included in the current state.
-	 * @param stateName -  Partial name, relative name, glob pattern, or state object to be searched for within the current state name.
-	 * @param stateParams - Param object, e.g. {sectionId: section.id}, to test against the current active state.
+	 * @param stateName  Partial name, relative name, glob pattern, or state object to be searched for within the current state name.
+	 * @param stateParams Param object, e.g. {sectionId: section.id}, to test against the current active state.
 	 */
 	isCurrentUiStateIncludedIn(stateName: string, stateParams?: RawParams): boolean;
 
 	/**
 	 * Adds a navigation rejection cause to the rejections causes known by the Routing service. These known rejection causes
 	 * will be treated differently than any other navigation error (a Rejection action will be dispatched instead of a Failure action).
-	 * @param rejectionCause - String that will be compared to the rejection reason provided by the router implementation
+	 * @param rejectionCause String that will be compared to the rejection reason provided by the router implementation
 	 */
 	addKnownNavigationRejectionCause(rejectionCause: string): void;
 
 	/**
 	 * Register a transition lifecycle {@link StarkRoutingTransitionHook|hook} that will be called by the router implementation.
-	 * @param lifecycleHook - Type of lifecycle hook to be registered.
-	 * @param matchCriteria - The [HookMatchCriteria](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.hookmatchcriteria.html) to determine
+	 * @param lifecycleHook Type of lifecycle hook to be registered.
+	 * @param matchCriteria The [HookMatchCriteria](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.hookmatchcriteria.html) to determine
 	 * which transitions the hook should be invoked for.
-	 * @param callback - A [Transition State Hook callback function](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.transitionstatehookfn.html) or
+	 * @param callback A [Transition State Hook callback function](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.transitionstatehookfn.html) or
 	 * [Transition Hook callback function](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.transitionhookfn.html)
-	 * @param options - Additional [options](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.hookregoptions.html) when
+	 * @param options Additional [options](https://ui-router.github.io/ng2/docs/latest/interfaces/transition.hookregoptions.html) when
 	 * registering the transition hook.
 	 * @returns A function which deregisters the transition hook
 	 */
@@ -174,7 +174,7 @@ export interface StarkRoutingService {
 	 * 1. From the state's resolves if defined
 	 * 2. From the state's data if defined
 	 * 3. Otherwise, the state name is used
-	 * @param stateName - Name of the state to get the translation key from
+	 * @param stateName Name of the state to get the translation key from
 	 */
 	getTranslationKeyFromState(stateName: string): string;
 }

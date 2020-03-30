@@ -44,8 +44,8 @@ export class MockStarkLoggingService implements SpyObj<StarkLoggingService> {
 
 	/**
 	 * Creates a new mock instance.
-	 * @param mockCorrelationId - Correlation id to set to this instance
-	 * @param mockCorrelationIdHeaderName - Correlation header name to set to this instance
+	 * @param mockCorrelationId Correlation id to set to this instance
+	 * @param mockCorrelationIdHeaderName Correlation header name to set to this instance
 	 */
 	public constructor(
 		mockCorrelationId: string = "dummyCorrelationId",

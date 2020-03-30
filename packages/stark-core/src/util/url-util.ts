@@ -4,7 +4,7 @@
 export class StarkUrlUtil {
 	/**
 	 * Extracts all the expected parameters defined in the URL. These are defined by a placeholder like ":paramName".
-	 * @param url - The URL containing the placeholders for URL parameters.
+	 * @param url The URL containing the placeholders for URL parameters.
 	 * @returns An array containing all the expected parameters defined in the URL (the placeholders ":paramName" that are present in the URL)
 	 */
 	public static parseUrlParams(url: string): string[] {
@@ -23,8 +23,8 @@ export class StarkUrlUtil {
 
 	/**
 	 * Interpolates the URL params with the given parameters object. It replaces the params placeholders with their corresponding values.
-	 * @param url - The URL containing the placeholders for URL parameters.
-	 * @param params - Object containing params name-value pairs to be replaced in the URL
+	 * @param url The URL containing the placeholders for URL parameters.
+	 * @param params Object containing params name-value pairs to be replaced in the URL
 	 * @returns The final URL with the parameters placeholders replaced by their corresponding values
 	 */
 	public static interpolateUrlWithParams(url: string, params: { [param: string]: string }): string {

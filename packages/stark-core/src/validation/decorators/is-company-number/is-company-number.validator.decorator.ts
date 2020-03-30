@@ -12,7 +12,7 @@ import { starkIsCompanyNumberValidatorName } from "../../validators/is-company-n
 class StarkIsCompanyNumberConstraint implements ValidatorConstraintInterface {
 	/**
 	 * Validates that a given Company number is valid
-	 * @param companyNumber - The number to validate
+	 * @param companyNumber The number to validate
 	 * @returns `true` if the company number is valid or not
 	 */
 	public validate(companyNumber: string): boolean {

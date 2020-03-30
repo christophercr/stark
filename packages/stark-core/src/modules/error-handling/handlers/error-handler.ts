@@ -23,13 +23,13 @@ export class StarkErrorHandler implements ErrorHandler {
 
 	/**
 	 * Class constructor
-	 * @param injector - The Angular injector
+	 * @param injector The Angular injector
 	 */
 	public constructor(private injector: Injector) {}
 
 	/**
 	 * Dispatches an {@link StarkUnhandledError} action which the user can then handle
-	 * @param error - The encountered error
+	 * @param error The encountered error
 	 */
 	public handleError(error: any): void {
 		this.starkLoggingService.error("StarkErrorHandler: an error has occurred : ", error);

@@ -40,14 +40,14 @@ export interface StarkSessionService {
 	 * Sets the current session's language (language Id).
 	 * It dispatches a CHANGE_LANGUAGE action to the NGRX-Store
 	 *
-	 * @param newLanguage - The language Id to be set
+	 * @param newLanguage The language Id to be set
 	 */
 	setCurrentLanguage(newLanguage: string): void;
 
 	/**
 	 * Performs the login of the given {@link StarkUser}. Internally, it performs all the necessary actions to initialize the session.
 	 *
-	 * @param user - The user to log in.
+	 * @param user The user to log in.
 	 */
 	login(user: StarkUser): void;
 

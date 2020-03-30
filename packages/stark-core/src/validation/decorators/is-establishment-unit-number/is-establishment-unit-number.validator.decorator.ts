@@ -12,7 +12,7 @@ import { starkIsEstablishmentUnitNumberValidatorName } from "../../validators/is
 class StarkIsEstablishmentUnitNumberConstraint implements ValidatorConstraintInterface {
 	/**
 	 * Validates that a given Establishment number provided is valid
-	 * @param establishmentNumber - The establishment number to validate
+	 * @param establishmentNumber The establishment number to validate
 	 * @returns `true` if the establishment number is valida
 	 */
 	public validate(establishmentNumber: string): boolean {
@@ -32,7 +32,7 @@ class StarkIsEstablishmentUnitNumberConstraint implements ValidatorConstraintInt
 
 /**
  * Validator decorator that uses the StarkIsIsEstablishmentUnitNumber validator constraint
- * @param validationOptions - The options that will define the validity of the establishment number
+ * @param validationOptions The options that will define the validity of the establishment number
  * @returns Function
  */
 export function StarkIsEstablishmentUnitNumber(validationOptions?: ValidationOptions): Function {

@@ -9,7 +9,7 @@ export interface StarkHttpCreateRequestBuilder<T extends StarkResource> extends 
 	/**
 	 * Adds an "echo" query parameter to the request
 	 *
-	 * @param echo - Echo parameter to specify whether the response should contain a response body
+	 * @param echo Echo parameter to specify whether the response should contain a response body
 	 * @returns The current builder
 	 */
 	echo(echo: StarkHttpEchoType): this;

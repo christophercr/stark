@@ -26,10 +26,10 @@ export class StarkNavigate implements Action {
 
 	/**
 	 * Class constructor
-	 * @param currentState - Name of the current state before the navigation starts.
-	 * @param newState - Name of the state to be navigated to.
-	 * @param params - State params object to be passed to the navigated state.
-	 * @param options - Transition options object to change the behavior of the transition.
+	 * @param currentState Name of the current state before the navigation starts.
+	 * @param newState Name of the state to be navigated to.
+	 * @param params State params object to be passed to the navigated state.
+	 * @param options Transition options object to change the behavior of the transition.
 	 */
 	public constructor(
 		public currentState: string,
@@ -52,9 +52,9 @@ export class StarkNavigateSuccess implements Action {
 
 	/**
 	 * Class constructor
-	 * @param previousState - Name of the initial state where the navigation was started.
-	 * @param currentState - Name of the state that was navigated to.
-	 * @param params - State params object that was passed to the navigated state.
+	 * @param previousState Name of the initial state where the navigation was started.
+	 * @param currentState Name of the state that was navigated to.
+	 * @param params State params object that was passed to the navigated state.
 	 */
 	public constructor(public previousState: string, public currentState: string, public params?: RawParams) {}
 }
@@ -72,10 +72,10 @@ export class StarkNavigateFailure implements Action {
 
 	/**
 	 * Class constructor
-	 * @param currentState - Name of the current state before the navigation started.
-	 * @param newState - Name of the state tried to be navigated to.
-	 * @param params - State params object passed to the navigated state.
-	 * @param error - The error describing the reason of the navigation failure.
+	 * @param currentState Name of the current state before the navigation started.
+	 * @param newState Name of the state tried to be navigated to.
+	 * @param params State params object passed to the navigated state.
+	 * @param error The error describing the reason of the navigation failure.
 	 */
 	public constructor(public currentState: string, public newState: string, public params: RawParams, public error: string) {}
 }
@@ -92,10 +92,10 @@ export class StarkNavigateRejection implements Action {
 
 	/**
 	 * Class constructor
-	 * @param currentState - Name of the current state before the navigation started.
-	 * @param newState - Name of the state tried to be navigated to.
-	 * @param params - State params object passed to the navigated state.
-	 * @param reason - The reason describing why the navigation was rejected. This is normally a reason already known by the developer.
+	 * @param currentState Name of the current state before the navigation started.
+	 * @param newState Name of the state tried to be navigated to.
+	 * @param params State params object passed to the navigated state.
+	 * @param reason The reason describing why the navigation was rejected. This is normally a reason already known by the developer.
 	 */
 	public constructor(public currentState: string, public newState: string, public params: RawParams, public reason: string) {}
 }
@@ -123,7 +123,7 @@ export class StarkReload implements Action {
 
 	/**
 	 * Class constructor
-	 * @param state - Name of the state to be reloaded.
+	 * @param state Name of the state to be reloaded.
 	 */
 	public constructor(public state: string) {}
 }
@@ -141,8 +141,8 @@ export class StarkReloadSuccess implements Action {
 
 	/**
 	 * Class constructor
-	 * @param state -  name of the state that was reloaded.
-	 * @param params - State params object passed to the reloaded state.
+	 * @param state  name of the state that was reloaded.
+	 * @param params State params object passed to the reloaded state.
 	 */
 	public constructor(public state: string, public params: RawParams) {}
 }
@@ -159,8 +159,8 @@ export class StarkReloadFailure implements Action {
 
 	/**
 	 * Class constructor
-	 * @param state - Name of the state tried to be reloaded.
-	 * @param params - State params object passed to the reloaded state.
+	 * @param state Name of the state tried to be reloaded.
+	 * @param params State params object passed to the reloaded state.
 	 */
 	public constructor(public state: string, public params: RawParams) {}
 }

@@ -22,7 +22,7 @@ export class StarkPersistPreferredLanguage implements Action {
 
 	/**
 	 * Class constructor
-	 * @param language - The language to persist
+	 * @param language The language to persist
 	 */
 	public constructor(public language: string) {}
 }
@@ -52,7 +52,7 @@ export class StarkPersistPreferredLanguageFailure implements Action {
 
 	/**
 	 * Class constructor
-	 * @param error - The reason why the preferred language could not be persisted
+	 * @param error The reason why the preferred language could not be persisted
 	 */
 	public constructor(public error: any) {}
 }
@@ -69,7 +69,7 @@ export class StarkSetPreferredLanguage implements Action {
 
 	/**
 	 * Class constructor
-	 * @param language - The new preferred language
+	 * @param language The new preferred language
 	 */
 	public constructor(public language: string) {}
 }

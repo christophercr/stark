@@ -152,7 +152,7 @@ export interface StarkApplicationConfig {
 	/**
 	 * Get a {@link StarkBackend} by name
 	 *
-	 * @param name - Name of the back-end object to get
+	 * @param name Name of the back-end object to get
 	 * @returns The requested `StarkBackend` object
 	 */
 	getBackend(name: string): StarkBackend;
@@ -160,14 +160,14 @@ export interface StarkApplicationConfig {
 	/**
 	 * Add a {@link StarkBackend}
 	 *
-	 * @param backend - `StarkBackend` object to add
+	 * @param backend `StarkBackend` object to add
 	 */
 	addBackend(backend: StarkBackend): void;
 
 	/**
 	 * Define all {@link StarkBackend} objects
 	 *
-	 * @param backends - Array of `StarkBackend` objects to add
+	 * @param backends Array of `StarkBackend` objects to add
 	 */
 	setBackends(backends: StarkBackend[]): void;
 

@@ -23,7 +23,7 @@ export interface StarkXSRFService {
 	 *
 	 * This method should be used for those HTTP "state-changing" requests (POST, PUT, PATCH or DELETE) which are not performed
 	 * using StarkHttpService or Angular raw $http
-	 * @param xhr - The XHR object to be configured
+	 * @param xhr The XHR object to be configured
 	 */
 	configureXHR(xhr: XMLHttpRequest): void;
 
@@ -32,7 +32,7 @@ export interface StarkXSRFService {
 	 * for "state-changing" requests (POST, PUT, PATCH or DELETE) in order to enable XSRF protection.
 	 *
 	 * Logs a warning whenever there is no XSRF token to be sent in such requests
-	 * @param request - The Angular `HttpRequest` to be modified
+	 * @param request The Angular `HttpRequest` to be modified
 	 * @returns The modified Angular `HttpRequest`
 	 */
 	configureHttpRequest(request: HttpRequest<any>): HttpRequest<any>;

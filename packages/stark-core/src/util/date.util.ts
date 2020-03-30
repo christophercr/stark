@@ -12,8 +12,8 @@ export class StarkDateUtil {
 	 *
 	 * Supported formats are those specified in the {@link https://momentjs.com/docs/#/parsing/string-format/|Moment.js API docs: parse string format}
 	 *
-	 * @param dateString - A valid ISO 8601 string or a custom one aligned to the format provided
-	 * @param format - A valid format string according to Moment.js API docs
+	 * @param dateString A valid ISO 8601 string or a custom one aligned to the format provided
+	 * @param format A valid format string according to Moment.js API docs
 	 */
 	public static parseDateWithFormat(dateString: string, format: string): Date | undefined {
 		if (moment(dateString, format).isValid()) {
@@ -28,8 +28,8 @@ export class StarkDateUtil {
 	 *
 	 * Supported formats are those specified in the {@link https://momentjs.com/docs/#/displaying/format/|Moment.js API docs: display format}
 	 *
-	 * @param date - A Date object to be formatted
-	 * @param format - A valid format string according to the Moment.js API docs
+	 * @param date A Date object to be formatted
+	 * @param format A valid format string according to the Moment.js API docs
 	 */
 	public static format(date: Date, format: string = "DD-MM-YYYY"): string {
 		let formattedDate = "invalid date";

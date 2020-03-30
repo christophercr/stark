@@ -32,7 +32,7 @@ export class StarkChangeLanguage implements Action {
 
 	/**
 	 * Class constructor
-	 * @param languageId - The target language to change to.
+	 * @param languageId The target language to change to.
 	 */
 	public constructor(public languageId: string) {}
 }
@@ -49,7 +49,7 @@ export class StarkChangeLanguageSuccess implements Action {
 
 	/**
 	 * Class constructor
-	 * @param languageId -  The target language that was successfully changed to.
+	 * @param languageId  The target language that was successfully changed to.
 	 */
 	public constructor(public languageId: string) {}
 }
@@ -65,7 +65,7 @@ export class StarkChangeLanguageFailure implements Action {
 
 	/**
 	 * Class constructor
-	 * @param error - The error that caused the language change to fail.
+	 * @param error The error that caused the language change to fail.
 	 */
 	public constructor(public error: any) {}
 }
@@ -82,7 +82,7 @@ export class StarkInitializeSession implements Action {
 
 	/**
 	 * Class constructor
-	 * @param user - The user whose session will be initialized.
+	 * @param user The user whose session will be initialized.
 	 */
 	public constructor(public user: StarkUser) {}
 }
@@ -140,7 +140,7 @@ export class StarkSessionTimeoutCountdownStart implements Action {
 
 	/**
 	 * Class constructor
-	 * @param countdown - The countdown until the session will be automatically destroyed.
+	 * @param countdown The countdown until the session will be automatically destroyed.
 	 */
 	public constructor(public countdown: number) {}
 }

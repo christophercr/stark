@@ -35,7 +35,7 @@ export class StarkFetchUserProfileSuccess implements Action {
 
 	/**
 	 * Class constructor
-	 * @param user - The user fetched from the REST API
+	 * @param user The user fetched from the REST API
 	 */
 	public constructor(public user: StarkUser) {}
 }
@@ -51,7 +51,7 @@ export class StarkFetchUserProfileFailure implements Action {
 
 	/**
 	 * Class constructor
-	 * @param error - The error that caused the user fetching to fail.
+	 * @param error The error that caused the user fetching to fail.
 	 */
 	public constructor(public error: StarkHttpErrorWrapper | Error) {}
 }
@@ -78,7 +78,7 @@ export class StarkGetAllUsersSuccess implements Action {
 
 	/**
 	 * Class constructor
-	 * @param users - The users retrieved from the the mock data.
+	 * @param users The users retrieved from the the mock data.
 	 */
 	public constructor(public users: StarkUser[]) {}
 }
@@ -94,7 +94,7 @@ export class StarkGetAllUsersFailure implements Action {
 
 	/**
 	 * Class constructor
-	 * @param message - The message describing all the users failure.
+	 * @param message The message describing all the users failure.
 	 */
 	public constructor(public message: string) {}
 }

@@ -12,7 +12,7 @@ import { starkIsSupportedLanguageValidatorName } from "../../validators/is-suppo
 class StarkIsSupportedLanguageConstraint implements ValidatorConstraintInterface {
 	/**
 	 * Validates that the language is supported
-	 * @param isoCode - The iseCode to validate
+	 * @param isoCode The iseCode to validate
 	 * @returns `true` if the isoCode is valid
 	 */
 	public validate(isoCode: string): boolean {
@@ -31,7 +31,7 @@ class StarkIsSupportedLanguageConstraint implements ValidatorConstraintInterface
 
 /**
  * Validator decorator that uses the StarkIsSupportedLanguage validator constraint
- * @param validationOptions - The options that will define the validity of the language
+ * @param validationOptions The options that will define the validity of the language
  * @returns Function
  */
 export function StarkIsSupportedLanguage(validationOptions?: ValidationOptions): Function {

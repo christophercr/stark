@@ -21,7 +21,7 @@ export class StarkSetLoggingApplicationId implements Action {
 
 	/**
 	 * Class constructor
-	 * @param applicationId - The id of the application
+	 * @param applicationId The id of the application
 	 */
 	public constructor(public applicationId: string) {}
 }
@@ -37,7 +37,7 @@ export class StarkLogMessageAction implements Action {
 
 	/**
 	 * Class constructor
-	 * @param message - The message to log
+	 * @param message The message to log
 	 */
 	public constructor(public message: StarkLogMessage) {}
 }
@@ -53,7 +53,7 @@ export class StarkFlushLogMessages implements Action {
 
 	/**
 	 * Class constructor
-	 * @param numberOfMessagesToFlush - The number of messages to flush
+	 * @param numberOfMessagesToFlush The number of messages to flush
 	 */
 	public constructor(public numberOfMessagesToFlush: number) {}
 }

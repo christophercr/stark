@@ -19,7 +19,7 @@ export const STARK_HTTP_PARAM_ENCODER: HttpParameterCodec = new StarkHttpParamet
 export class StarkHttpUtil {
 	/**
 	 * Converts the `Map<string, StarkQueryParam>` required by the {@link StarkHttpService} into a `HttpParams` object required by Angular
-	 * @param starkQueryParam - Params to convert
+	 * @param starkQueryParam Params to convert
 	 */
 	public static convertStarkQueryParamsIntoHttpParams(starkQueryParam: Map<string, StarkQueryParam>): HttpParams {
 		return reduce(

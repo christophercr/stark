@@ -12,7 +12,7 @@ import { starkIsISINValidatorName } from "../../validators/is-isin";
 class StarkIsISINConstraint implements ValidatorConstraintInterface {
 	/**
 	 * Validates that the given ISIN number is valid
-	 * @param isin - The isin number to validate
+	 * @param isin The isin number to validate
 	 * @returns `true` if the isin is valid
 	 */
 	public validate(isin: string): boolean {
@@ -32,7 +32,7 @@ class StarkIsISINConstraint implements ValidatorConstraintInterface {
 
 /**
  * Validator decorator that uses the StarkIsISIN validator constraint
- * @param validationOptions - The options that will define the validity of the ISIN number
+ * @param validationOptions The options that will define the validity of the ISIN number
  * @returns Function
  */
 export function StarkIsISIN(validationOptions?: ValidationOptions): Function {

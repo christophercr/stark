@@ -236,7 +236,7 @@ export class StarkLoggingServiceImpl implements StarkLoggingService {
 	/**
 	 * Returns the specified window console method if it exists (debug, warn, info, error, trace),
 	 * otherwise returns console.log or empty function
-	 * @param type - Type of console to be used: info, debug, warn, error, trace
+	 * @param type Type of console to be used: info, debug, warn, error, trace
 	 */
 	protected getConsole(type: string): Function {
 		const console: any = window && window.console ? window.console : {};

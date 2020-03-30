@@ -24,14 +24,14 @@ export interface StarkHttpService<T extends StarkResource> {
 
 	/**
 	 * Executes {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequests} to fetch a single resource
-	 * @param request - The `HttpRequest` to be executed
+	 * @param request The `HttpRequest` to be executed
 	 * @returns Observable that will emit the `StarkSingleItemResponseWrapper`
 	 */
 	executeSingleItemRequest(request: StarkHttpRequest): Observable<StarkSingleItemResponseWrapper<T>>;
 
 	/**
 	 * Executes {@link https://v7.angular.io/api/common/http/HttpRequest|HttpRequests} to fetch an array of resources
-	 * @param request - The `HttpRequest` to be executed
+	 * @param request The `HttpRequest` to be executed
 	 * @returns Observable that will emit the `StarkCollectionResponseWrapper`
 	 */
 	executeCollectionRequest(request: StarkHttpRequest): Observable<StarkCollectionResponseWrapper<T>>;

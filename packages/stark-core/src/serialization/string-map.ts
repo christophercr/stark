@@ -7,7 +7,7 @@ import { Deserialize, ISerializable, Serialize } from "cerialize";
  * See:
  * - {@link https://github.com/weichx/cerialize/issues/32}
  * - {@link https://github.com/weichx/cerialize/issues/33}
- * @param targetType - The type in which we want to serialize a file
+ * @param targetType The type in which we want to serialize a file
  */
 export const stringMap: Function = (targetType: any): ISerializable => {
 	return {

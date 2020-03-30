@@ -9,9 +9,9 @@ export const starkArraySizeRangeValidatorName = "starkArraySizeRange";
 /**
  * @ignore
  * Validates that the size of the given array is between the minimum and maximum limits defined
- * @param array - An array of selected items
- * @param minSize - The minSize we want to apply to the array
- * @param maxSize - The maxSize we want to apply to the array
+ * @param array An array of selected items
+ * @param minSize The minSize we want to apply to the array
+ * @param maxSize The maxSize we want to apply to the array
  * @returns `true` if the array size range is valid
  */
 export function starkArraySizeRange(array: any[], minSize?: number, maxSize?: number): boolean {

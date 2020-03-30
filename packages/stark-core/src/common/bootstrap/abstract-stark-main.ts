@@ -14,7 +14,7 @@ import { StarkEnvironment } from "../environment";
 export abstract class AbstractStarkMain implements StarkMain {
 	/**
 	 * Class constructor
-	 * @param environment - Environment constant provided by the current Angular build
+	 * @param environment Environment constant provided by the current Angular build
 	 */
 	protected constructor(protected environment: StarkEnvironment) {
 		// no-op
@@ -146,7 +146,7 @@ We need great software developers like you! https://jobs.nbb.be
 	/**
 	 * Modify/decorate the NgModule instance created by Angular.
 	 * Adapt the configuration based on the current environment
-	 * @param moduleRef - NgModule instance created by Angular for a given platform.
+	 * @param moduleRef NgModule instance created by Angular for a given platform.
 	 */
 	public decorateModule = (moduleRef: NgModuleRef<any>): NgModuleRef<any> => {
 		// written like this because otherwise "this" will not be captured :)

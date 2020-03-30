@@ -12,7 +12,7 @@ import { starkIsBICValidatorName } from "../../validators/is-bic";
 class StarkIsBICConstraint implements ValidatorConstraintInterface {
 	/**
 	 * Validates that a give BIC address is valid
-	 * @param bic - The bic to validate
+	 * @param bic The bic to validate
 	 * @returns `true` if the bic has been validated
 	 */
 	public validate(bic: string): boolean {
@@ -31,7 +31,7 @@ class StarkIsBICConstraint implements ValidatorConstraintInterface {
 
 /**
  * Validator decorator that uses the StarkIsBIC validator constraint
- * @param validationOptions - The options used for validation
+ * @param validationOptions The options used for validation
  * @returns Function
  */
 export function StarkIsBIC(validationOptions?: ValidationOptions): Function {

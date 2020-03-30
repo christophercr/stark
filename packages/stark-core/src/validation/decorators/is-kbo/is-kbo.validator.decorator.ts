@@ -12,7 +12,7 @@ import { starkIsKBOValidatorName } from "../../validators/is-kbo";
 class StarkIsKBOConstraint implements ValidatorConstraintInterface {
 	/**
 	 * Validates that the given KBO number is valid
-	 * @param kbo - The kbo to validate
+	 * @param kbo The kbo to validate
 	 * @returns `true` if the kbo has been validated
 	 */
 	public validate(kbo: string): boolean {
@@ -32,7 +32,7 @@ class StarkIsKBOConstraint implements ValidatorConstraintInterface {
 
 /**
  * Validator decorator that uses the StarkIsKBO validator constraint
- * @param validationOptions - The options that will define the validity of the kbo number
+ * @param validationOptions The options that will define the validity of the kbo number
  * @returns Function
  */
 export function StarkIsKBO(validationOptions?: ValidationOptions): Function {

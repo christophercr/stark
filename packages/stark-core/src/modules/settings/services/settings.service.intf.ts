@@ -39,7 +39,7 @@ export interface StarkSettingsService {
 	/**
 	 * Sets the preferredLanguage setting (not persisted)
 	 *
-	 * @param language - Id of the preferred language
+	 * @param language Id of the preferred language
 	 */
 	setPreferredLanguage(language: string): void;
 }

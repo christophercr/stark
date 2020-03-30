@@ -19,7 +19,7 @@ export class StarkUnhandledError implements Action {
 
 	/**
 	 * Class constructor
-	 * @param error - The error to display
+	 * @param error The error to display
 	 */
 	public constructor(public error: any) {}
 }

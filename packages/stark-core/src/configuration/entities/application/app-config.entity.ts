@@ -183,7 +183,7 @@ export class StarkApplicationConfigImpl implements StarkApplicationConfig {
 	/**
 	 * Check whether the `keepAlive` option in the {@link StarkApplicationConfig} is disabled
 	 *
-	 * @param instance - The instance of the stark application configuration
+	 * @param instance The instance of the stark application configuration
 	 * @returns Whether keepAlive is in use, the value of `keepAliveDisabled` is set to false
 	 */
 	public static validateIfKeepAliveEnabled(instance: StarkApplicationConfig): boolean {
@@ -193,7 +193,7 @@ export class StarkApplicationConfigImpl implements StarkApplicationConfig {
 	/**
 	 * Check whether the `loggingFlush` option in the {@link StarkApplicationConfig} is disabled
 	 *
-	 * @param instance - The instance of the stark application configuration
+	 * @param instance The instance of the stark application configuration
 	 * @returns Whether loggingFlush is in use, the value of `loggingFlushDisabled` is set to false
 	 */
 	public static validateIfLoggingFlushEnabled(instance: StarkApplicationConfig): boolean {

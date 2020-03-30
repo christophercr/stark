@@ -17,8 +17,8 @@ export interface StarkHttpSerializer<
 	/**
 	 * Serialize the given resource entity into an object or a string
 	 *
-	 * @param resource - The entity to serialize
-	 * @param request - Optional request object
+	 * @param resource The entity to serialize
+	 * @param request Optional request object
 	 *
 	 * @returns The serialized form of the provided resource
 	 */
@@ -27,9 +27,9 @@ export interface StarkHttpSerializer<
 	/**
 	 * Deserialize provided string or object into the corresponding resource entity
 	 *
-	 * @param raw - The raw format to deserialize from
-	 * @param request - Optional request object
-	 * @param response - Optional response object
+	 * @param raw The raw format to deserialize from
+	 * @param request Optional request object
+	 * @param response Optional response object
 	 *
 	 * @returns The entity instance created out of the deserialization process.
 	 */
