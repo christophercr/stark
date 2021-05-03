@@ -25,7 +25,7 @@
     "@types/prismjs": "^1.16.3",
     "angular2-text-mask": "^9.0.0",
     "normalize.css": "^8.0.1",
-    "nouislider": "^14.6.3",
+    "nouislider": "^15.0.0",
     "prettier": "~2.2.1",
     "pretty-data": "^0.40.0",
     "prismjs": "^1.23.0",
