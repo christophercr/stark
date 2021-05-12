@@ -47,7 +47,7 @@
     "cz-customizable": "^6.3.0",
     "hammerjs": "^2.0.8",
     "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
+    "lint-staged": "^11.0.0",
     "ng-packagr": "^5.7.1",
     "prettier": "~2.2.1",
     "release-it": "^14.4.1",
